@@ -5,7 +5,62 @@
     <title>Shopping Cart</title>
   </head>
   <script type="text/javascript">
-  console.log("we are the champions.");
+  var itemsToBeReviewed = [];
+  var itemsToBeReviewedLocation = [];
+  function reportInvalidItem(product,location){
+    //sendMail('boss','boss@newco.nu','product');
+    itemsToBeReviewed.push(product);
+    itemsToBeReviewedLocation.push(location);
+  };
+  var prices = [
+    3.14,
+    69.99,
+    "meow"
+  ];
+  var totalPrice = 0;
+  var products = [
+    "Apple Pie",
+    "Auto Cat Feeder",
+    70.89
+  ];
+
+  console.log('Shopping Cart App');
+  console.log('-----------------');
+  console.log('We have found the following items in your cart:')
+  console.log(prices);
+  console.log(products);
+  console.log('-----------------');
+
+  // loop thru all the things
+  prices.forEach(function(item) {
+
+    if(typeof item == 'number'){
+      totalPrice = totalPrice + item;
+    } else {
+      // throw new Error("Whoops, someone entered NaN");
+      // console.log(item);
+      // console.log('has bad datazz');
+      reportInvalidItem(item, prices.indexOf(item));
+    }
+    // console.log(item);
+  });
+
+  console.log('Your total price is:');
+  console.log('-----------------');
+
+  console.log('$'+totalPrice);
+
+  console.log('-----------------');
+  console.log('We have found invalid items in your cart.');
+  console.log('They have been removed and your total does not reflect their price.')
+  console.log('-----------------');
+
+  console.log(itemsToBeReviewed);
+  console.log(itemsToBeReviewedLocation);
+
+  console.log('-----------------');
+  console.log('Thanks for using Phamazon. :)');
+  console.log('-----------------');
   </script>
   <body>
     My first shopping cart experience.
