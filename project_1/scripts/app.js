@@ -7,134 +7,71 @@
 // $('body').append(img);
 
 
-// global variables ... probably wayyy too many
+// global variables
 var placementTurn=0;
 var placementTurnTotal=16;
 var dragged;
-var playerOneScore = 0;
-var playerTwoScore = 0;
-var playerThreeScore = 0;
-var playerFourScore = 0;
-var playerOneTotalTokens;
-var playerTwoTotalTokens;
-var playerThreeTotalTokens;
-var playerFourTotalTokens;
-var playerOneCanOnlyFireOnce=0;
-var playerTwoCanOnlyFireOnce=0;
-var playerThreeCanOnlyFireOnce=0;
-var playerFourCanOnlyFireOnce=0;
+var playerOneScore, playerTwoScore, playerThreeScore, playerFourScore = 0;
+var playerOneTotalTokens, playerTwoTotalTokens, playerThreeTotalTokens, playerFourTotalTokens;
+
+// var playerOne = {
+//
+// }
 
 // once a player's tokens are exhausted game spits out score
-// while(playerOneTotalTokens >= 1 && playerTwoTotalTokens >= 1) {
-//   if(playerOneScore > playerTwoScore) {
-//     console.log('Player One wins! The score is: Player One: '+playerOneScore+' - '+playerTwoScore+' : Player Two');
-//   } else if(playerTwoScore > playerOneScore) {
-//     console.log('Player Two wins! The score is: Player One: '+playerOneScore+' - '+playerTwoScore+' : Player Two');
-//   } else {
-//     console.log('Tie! Whoadathunk!?');
-//   }
+// currently not working due to when last token removed
+// does not add one to the playerScore because the div no
+// longer has any children to add to the score
+
+while(playerOneTotalTokens >= 1 && playerTwoTotalTokens >= 1 && playerThreeTotalTokens >= 1 && playerFourTotalTokens >= 1) {
+  if(Math.max(playerOneScore,playerTwoScore,)) {
+    console.log('Player One wins! The score is: Player One: '+playerOneScore+' - '+playerTwoScore+' : Player Two');
+  } else if(playerTwoScore > playerOneScore) {
+    console.log('Player Two wins! The score is: Player One: '+playerOneScore+' - '+playerTwoScore+' : Player Two');
+  } else if (){
+    console.log('Tie! Whoadathunk!?');
+  }
+}
+// function rules() {
+//   // rules should slide over on top of game or fadeIn
 // }
-function rules() {
-  
-}
+// function whoWins() {
+//   $.eq(Math.max(playerOneScore,playerTwoScore,playerThreeScore,playerFourScore));
+// }
+// console.log(whoWins());
 
-
-function createPlayerOneTokens() {
-  for(i=0; i <=15; i++) {
-    var whiteSheepTokens = $('<img src="images/white_battlesheep.png" draggable="true" class="sheep-piece" ondragover="event.preventDefault()" />');
-    $('.playerOne').append(whiteSheepTokens);
+function createTokens(playerClass, color) {
+  for(i=0;i <=15; i++) {
+    var imgTag = '<img src="images/'+color+'_battlesheep.png" draggable="true" class="sheep-piece" ondragover="event.preventDefault()" />';
+    var tokenColor = $(imgTag);
+    $(playerClass).append(tokenColor);
   }
-  return null;
-}
-function createPlayerTwoTokens() {
-  for(i=0; i <=15; i++) {
-    var redSheepTokens = $('<img src="images/red_battlesheep.png" draggable="true" class="sheep-piece" ondragover="event.preventDefault()" />');
-    $('.playerTwo').append(redSheepTokens);
-  }
-  return null;
-}
-function createPlayerThreeTokens() {
-  for(i=0; i <=15; i++) {
-    var blueSheepTokens = $('<img src="images/blue_battlesheep.png" draggable="true" class="sheep-piece" ondragover="event.preventDefault()" />');
-    $('.playerThree').append(blueSheepTokens);
-  }
-  return null;
-}
-function createPlayerFourTokens() {
-  for(i=0; i <=15; i++) {
-    var blackSheepTokens = $('<img src="images/black_battlesheep.png" draggable="true" class="sheep-piece" ondragover="event.preventDefault()" />');
-    $('.playerFour').append(blackSheepTokens);
-  }
-  return null;
 }
 // DOM observer that fires once player column is empty
-// player one
-$('.playerOne').bind('DOMSubtreeModified', function(e) {
-  if(e.target.innerHTML <= 0) {
-    if(playerOneCanOnlyFireOnce < 1) {
-      createPlayerOneTokens();
-      playerOneCanOnlyFireOnce++;
-      playerOneTotalTokens = $('.playerOne').children().length;
-      playerOneScore = 16 - playerOneTotalTokens;
-    } else if(playerOneCanOnlyFireOnce === 1) {
-      console.log(playerOneScore);
+// and only once
+function monitorAPlayer(playerClass, color, playerScoreVar, fireCount) {
+  $(playerClass).bind('DOMSubtreeModified', function(e) {
+    if(e.target.innerHTML <= 0) {
+      if(fireCount < 1) {
+        createTokens(playerClass, color)
+        fireCount++;
+      } else if (fireCount >= 1) {
+        console.log('These aren\'t the droids you\'re looking for.');
+      } else {
+        return null;
+      }
     }
-    else {
-      return null;
-    }
-  }
-});
-// player two
-$('.playerTwo').bind('DOMSubtreeModified', function(e) {
-  if(e.target.innerHTML <= 0) {
-    if(playerTwoCanOnlyFireOnce < 1) {
-      createPlayerTwoTokens();
-      playerTwoCanOnlyFireOnce++;
-      playerTwoTotalTokens = $('.playerTwo').children().length;
-      playerTwoScore = 16 - playerTwoTotalTokens;
-    } else if(playerTwoCanOnlyFireOnce === 1) {
-      console.log(playerTwoScore);
-    }
-    else {
-      return null;
-    }
-  }
-});
-// player three
-$('.playerThree').bind('DOMSubtreeModified', function(e) {
-  if(e.target.innerHTML <= 0) {
-    if(playerThreeCanOnlyFireOnce < 1) {
-      createPlayerThreeTokens();
-      playerThreeCanOnlyFireOnce++;
-      playerThreeTotalTokens = $('.playerThree').children().length;
-      playerThreeScore = 16 - playerThreeTotalTokens;
-    } else if(playerThreeCanOnlyFireOnce === 1) {
-      console.log(playerThreeScore);
-    }
-    else {
-      return null;
-    }
-  }
-});
-// player four
-$('.playerFour').bind('DOMSubtreeModified', function(e) {
-  if(e.target.innerHTML <= 0) {
-    if(playerFourCanOnlyFireOnce < 1) {
-      createPlayerFourTokens();
-      playerFourCanOnlyFireOnce++;
-      playerFourTotalTokens = $('.playerFour').children().length;
-      playerFourScore = 16 - playerFourTotalTokens;
-    } else if(playerFourCanOnlyFireOnce === 1) {
-      console.log(playerFourScore);
-    }
-    else {
-      return null;
-    }
-  }
-});
+  });
+}
+// player one test
+monitorAPlayer('.playerOne', 'black', playerOneScore, 0);
+monitorAPlayer('.playerTwo', 'red', playerTwoScore, 0);
+monitorAPlayer('.playerThree', 'white', playerThreeScore, 0);
+monitorAPlayer('.playerFour', 'blue', playerFourScore, 0);
+
 // draggable functions
 function drag(e) {
-e.target.style.opacity = 0.5;
+  e.target.style.opacity = 0.5;
 }
 function dragStart(e) {
   // store the drag target element in var dragged
@@ -179,25 +116,37 @@ function drop(e) {
     dragged.setAttribute('draggable', false);     // remove draggable ability from board pieces once they are placed
     placementTurn++;                              // add one to placementTurn
     if(placementTurn >= placementTurnTotal) {     // used as a check to see if the max number of board tiles have been played
-      // remove dropzone classes from all divs to prevent movement of board
-      $('.dropzone').removeClass('dropzone');
-      console.log("We go in! We kill!"); // We go iiinnnnn. We kiiilllll.
+      $('.dropzone').removeClass('dropzone');     // remove dropzone classes from all divs to prevent movement of board
+      console.log("We go in! We kill!");          // We go iiinnnnn. We kiiilllll.
     } else {
-      console.log("Soon my dog of war...");  // You just... you just wait!
+      console.log("Soon my dog of war...");       // You just... you just wait!
     }
   } else if(e.target.className === "dropzoneOne") {
     e.target.style.background = "";
+    var playerParentNode = dragged.parentNode;
+    // console.log(dragged.parentNode.className);
+      if(playerParentNode.className === 'land-div playerOne') {
+        playerOneTotalTokens = $('.playerOne').children().length;
+        playerOneScore = 17 - playerOneTotalTokens;
+        console.log(playerOneScore);
+      } else if(playerParentNode.className === 'land-div playerTwo') {
+        playerTwoTotalTokens = $('.playerTwo').children().length;
+        playerTwoScore = 17 - playerTwoTotalTokens;
+        console.log(playerTwoScore);
+      } else if(playerParentNode.className === 'land-div playerThree') {
+        playerThreeTotalTokens = $('.playerThree').children().length;
+        playerThreeScore = 17 - playerThreeTotalTokens;
+        cosole.log(playerThreeScore);
+      } else if(playerParentNode.className === 'land-div playerFour') {
+        playerFourTotalTokens = $('.playerFour').children().length;
+        playerFourScore = 17 - playerFourTotalTokens;
+        console.log(playerFourScore);
+      } else {
+        console.log('wat');
+      }
     dragged.parentNode.removeChild(dragged);
     e.target.appendChild(dragged);
     dragged.setAttribute('draggable', false);
-    playerOneTotalTokens = $('.playerOne').children().length;
-    playerTwoTotalTokens = $('.playerTwo').children().length;
-    playerThreeTotalTokens = $('.playerThree').children().length;
-    playerFourTotalTokens = $('.playerFour').children().length;
-    playerOneScore = 16 - playerOneTotalTokens;
-    playerTwoScore = 16 - playerTwoTotalTokens;
-    playerThreeScore = 16 - playerThreeTotalTokens;
-    playerFourScore = 16 - playerFourTotalTokens;
   }
 }
 
@@ -209,10 +158,35 @@ document.addEventListener('dragover', dragOver, false);
 document.addEventListener('dragenter', dragEnter, false);
 document.addEventListener('dragleave', dragLeave, false);
 document.addEventListener('drop', drop, false);
-button.addEventListener('click', rules, false);
+// button.addEventListener('click', rules, false);
 
+
+// NOTES AND TERRIBLE CODE LOL
 /*
 $('.second-grid-top').on('click', function() {
   console.log('top toptppptptptptpttpptptpt');
 });
 */
+// SUPER WET CODE for making tokens
+// function createPlayerOneTokens() {
+//   for(i=0;i <=15; i++) {
+//     var whiteToken = $('<img src="images/white_battlesheep.png" draggable="true" class="sheep-piece" ondragover="event.preventDefault()" />');
+//     $('.playerOne').append(whiteToken);
+//   }
+// }
+// SUPER WET CODE for monitoring divs and when they become empty
+// $('.playerOne').bind('DOMSubtreeModified', function(e) {
+//   if(e.target.innerHTML <= 0) {
+//     if(playerOneCanOnlyFireOnce < 1) {
+//       createTokens('.playerOne', 'black');
+//       playerOneCanOnlyFireOnce++;
+//       playerOneTotalTokens = $('.playerOne').children().length;
+//       playerOneScore = 16 - playerOneTotalTokens;
+//     } else if(playerOneCanOnlyFireOnce === 1) {
+//       console.log(playerOneScore);
+//     }
+//     else {
+//       return null;
+//     }
+//   }
+// });
