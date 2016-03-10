@@ -11,53 +11,94 @@ html, body {
 }
 .column-left {
   display: inline-block;
+  position: relative;
   width: 14.06%;
   height: 100%;
   background-color: rgba(180,20,20,1);
   text-align: center;
   float: left;
-  overflow: visible;
+  overflow: hidden;
   border-right: 2px solid black;
 }
 .column-center {
   display: inline-block;
+  position: relative;
   width: 71.55%;
   height: 100%;
-  text-align: center;
   background-color: rgb(55, 55, 55);
 }
 .column-right {
   display: inline-block;
+  position: relative;
   width: 14.06%;
   height: 100%;
   background-color: lightblue;
   float: right;
   text-align: center;
-  overflow: visible;
+  overflow: hidden;
   border-left: 2px solid black;
 }
-span {
+.playing-space-head {
+  margin-left: 250px;
   font-size: 20px;
   color: white;
   border: 1px solid black;
   border-radius: 5px;
   padding: 10px 10px 5px 10px;
 }
+span {
+  font-size: 20px;
+  color: white;
+  border: 1px solid black;
+  border-radius: 5px;
+  padding: 10px;
+}
+button {
+  font-size: 20px;
+  color: white;
+  background: red;
+  margin-left: 25px;
+}
 .land-piece {
+  position: absolute;
   display: block;
   height: 200px;
-  weight: 150px;
+  width: 140px;
   z-index:1;
 }
 .land-div {
-  margin-top: 20px;
+  margin-top: 10px;
   margin-left: 20px;
+}
+.playerThree {
+  position: absolute;
+  width: 150px;
+  top: 390px;
+}
+#player-three-head {
+  position: absolute;
+  bottom: 310px;
+  left: 30px;
+}
+.playerFour {
+  position: absolute;
+  width: 150px;
+  top: 390px;
+}
+#player-four-head {
+  position: absolute;
+  bottom: 310px;
+  right: 35px;
 }
 #land-drop {
   display: inline-block;
+  position: relative;
   height: 200px;
   width: 137px;
   /* border: 2px dashed gray; */
+}
+.first-grid {
+  margin-left: 40px;
 }
 .drop-first-row {
   margin-top: 10px;
@@ -84,23 +125,14 @@ span {
   margin-top: -88px;
 }
 .sheep-piece {
-  top: 0;
-  left: 0;
+  display: inline-block;
   height: 50px;
   width: 50px;
   margin: 0 auto;
   z-index: 4;
 }
-.secondGridDivTop {
-  position: absolute;
-  display: inline;
-  margin: 0 auto;
-  width: 55px;
-  height: 55px;
-  z-index: 2;
-  border: 1px dashed red;
-}
 /*
+  Styling must be done in-line
 position: absolute;
 height: 400px;
 width: 400px;
@@ -108,28 +140,47 @@ opacity: 0.2;
 background: yellow;
 z-index: 9001;
 */
-.secondGridDivLeft {
-  position: absolute;
+#second-grid-top {
   display: inline-block;
-  width: 55px;
-  height: 55px;
-  z-index: 2;
-  border: 1px dashed red;
-}
-.secondGridDivRight {
   position: absolute;
+  height: 55px;
+  width: 55px;
+  z-index: 2;
+  top: 8px;
+  left: 39px;
+  padding-top: 5px;
+  // border: 1px dashed red;
+}
+#second-grid-left {
   display: inline-block;
-  width: 55px;
-  height: 55px;
-  z-index: 2;
-  border: 1px dashed red;
-}
-.secondGridDivBottom {
   position: absolute;
-  display: block;
-  margin: 0 auto;
-  width: 55px;
   height: 55px;
+  width: 55px;
   z-index: 2;
-  border: 1px dashed red;
+  top: 70px;
+  left: 5px;
+  padding-top: 5px;
+  // border: 1px dashed red;
+}
+#second-grid-right {
+  display: inline-block;
+  position: absolute;
+  height: 55px;
+  width: 55px;
+  z-index: 2;
+  top: 70px;
+  left: 75px;
+  padding-top: 5px;
+  // border: 1px dashed red;
+}
+#second-grid-bottom {
+  display: inline-block;
+  position: absolute;
+  height: 55px;
+  width: 55px;
+  z-index: 2;
+  top: 132px;
+  left: 39px;
+  padding-top: 5px;
+  // border: 1px dashed red;
 }

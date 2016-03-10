@@ -9,21 +9,33 @@
     <!-- Player One's column -->
     <div class="column-left">
       <!-- Player One header -->
-      <span>Player One</span>
-      <!-- Player One's land pieces -->
+      <span id="player-one-head">Player One</span>
+      <!-- Player One's playing pieces -->
       <div class="land-div playerOne">
-        <img src="images/battlesheetp_board.png" draggable="true" class="land-piece board-tile" ondragstart="event.dataTransfer.setData('image/png', null)">
-        <img src="images/battlesheetp_board.png" draggable="true" class="land-piece board-tile" ondragstart="event.dataTransfer.setData('image/png', null)">
-        <img src="images/battlesheetp_board.png" draggable="true" class="land-piece board-tile" ondragstart="event.dataTransfer.setData('image/png', null)">
-        <img src="images/battlesheetp_board.png" draggable="true" class="land-piece board-tile" ondragstart="event.dataTransfer.setData('image/png', null)">
+        <img src="images/battlesheetp_board.png" draggable="true" class="land-piece" ondragstart="event.dataTransfer.setData('image/png', null)">
+        <img src="images/battlesheetp_board.png" draggable="true" class="land-piece" ondragstart="event.dataTransfer.setData('image/png', null)">
+        <img src="images/battlesheetp_board.png" draggable="true" class="land-piece" ondragstart="event.dataTransfer.setData('image/png', null)">
+        <img src="images/battlesheetp_board.png" draggable="true" class="land-piece" ondragstart="event.dataTransfer.setData('image/png', null)">
       </div>
+      <!-- Player Two heading -->
+      <span id="player-three-head">Player Three</span>
+      <div class="land-div playerThree">
+        <img src="images/battlesheetp_board.png" draggable="true" class="land-piece" ondragstart="event.dataTransfer.setData('image/png', null)">
+        <img src="images/battlesheetp_board.png" draggable="true" class="land-piece" ondragstart="event.dataTransfer.setData('image/png', null)">
+        <img src="images/battlesheetp_board.png" draggable="true" class="land-piece" ondragstart="event.dataTransfer.setData('image/png', null)">
+        <img src="images/battlesheetp_board.png" draggable="true" class="land-piece" ondragstart="event.dataTransfer.setData('image/png', null)">
+      </div>
+      <!-- end of Player One's playing pieces -->
     </div>
-    <!-- Playing Field -->
+    <!-- end of Player One's column -->
+    <!-- begin Playing Field -->
     <div class="column-center">
+        <button>Rules</button>
       <!-- Playing Field Header -->
-      <span>Playing Space</span>
+      <span class="playing-space-head">Playing Space</span>
       <!-- Grid of divs for placement of tiles -->
-      <div>
+      <!-- div containing the entirity of the first grid -->
+      <div class="first-grid">
         <!-- First Row -->
         <div class="drop-first-row">
           <div class="dropzone" id="land-drop" ondragover="event.preventDefault()"></div>
@@ -33,7 +45,7 @@
           <div class="dropzone" id="land-drop" ondragover="event.preventDefault()"></div>
           <div class="dropzone" id="land-drop" ondragover="event.preventDefault()"></div>
         </div>
-        <!-- Second Row -->
+        <!-- Second Row - staggered to allow hexagons to fit together -->
         <div class="drop-second-row">
           <div class="dropzone" id="land-drop" ondragover="event.preventDefault()"></div>
           <div class="dropzone" id="land-drop" ondragover="event.preventDefault()"></div>
@@ -50,7 +62,7 @@
           <div class="dropzone" id="land-drop" ondragover="event.preventDefault()"></div>
           <div class="dropzone" id="land-drop" ondragover="event.preventDefault()"></div>
         </div>
-        <!-- Fourth row -->
+        <!-- Fourth row - staggared to allow hexagons to fit together -->
         <div class="drop-fourth-row">
           <div class="dropzone" id="land-drop" ondragover="event.preventDefault()"></div>
           <div class="dropzone" id="land-drop" ondragover="event.preventDefault()"></div>
@@ -69,15 +81,29 @@
         </div>
       </div>
     </div>
+    <!-- Player Two's column -->
     <div class="column-right">
-      <span>Player Two</span>
+      <!-- Player Two heading -->
+      <span id="player-two-head">Player Two</span>
+      <!-- Player Two's playing pieces -->
       <div class="land-div playerTwo">
-        <img src="images/battlesheetp_board.png" draggable="true" class="land-piece board-tile" ondragstart="event.dataTransfer.setData('image/png', null)">
-        <img src="images/battlesheetp_board.png" draggable="true" class="land-piece board-tile" ondragstart="event.dataTransfer.setData('image/png', null)">
-        <img src="images/battlesheetp_board.png" draggable="true" class="land-piece board-tile" ondragstart="event.dataTransfer.setData('image/png', null)">
-        <img src="images/battlesheetp_board.png" draggable="true" class="land-piece board-tile" ondragstart="event.dataTransfer.setData('image/png', null)">
+        <img src="images/battlesheetp_board.png" draggable="true" class="land-piece" ondragstart="event.dataTransfer.setData('image/png', null)">
+        <img src="images/battlesheetp_board.png" draggable="true" class="land-piece" ondragstart="event.dataTransfer.setData('image/png', null)">
+        <img src="images/battlesheetp_board.png" draggable="true" class="land-piece" ondragstart="event.dataTransfer.setData('image/png', null)">
+        <img src="images/battlesheetp_board.png" draggable="true" class="land-piece" ondragstart="event.dataTransfer.setData('image/png', null)">
       </div>
+        <!-- Player Two heading -->
+        <span id="player-four-head">Player Four</span>
+      <div class="land-div playerFour">
+        <img src="images/battlesheetp_board.png" draggable="true" class="land-piece" ondragstart="event.dataTransfer.setData('image/png', null)">
+        <img src="images/battlesheetp_board.png" draggable="true" class="land-piece" ondragstart="event.dataTransfer.setData('image/png', null)">
+        <img src="images/battlesheetp_board.png" draggable="true" class="land-piece" ondragstart="event.dataTransfer.setData('image/png', null)">
+        <img src="images/battlesheetp_board.png" draggable="true" class="land-piece" ondragstart="event.dataTransfer.setData('image/png', null)">
+      </div>
+      <!-- end of player Two playing pieces -->
     </div>
+    <!-- end of player two column -->
+    <!-- begin scripts -->
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.js"></script>
     <script type="text/javascript" src="scripts/app.js"></script>
   </body>
