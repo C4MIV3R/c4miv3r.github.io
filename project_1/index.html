@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Battle Sheep!</title>
+    <link rel="stylesheet" href="style/stylesheet.css" media="screen" title="no title" charset="utf-8">
+  </head>
+  <body>
+    <!-- Player One's column -->
+    <div class="column-left">
+      <!-- Player One header -->
+      <span>Player One</span>
+      <!-- Player One's land pieces -->
+      <div class="land-div playerOne">
+        <img src="images/battlesheetp_board.png" draggable="true" class="land-piece board-tile" ondragstart="event.dataTransfer.setData('image/png', null)">
+        <img src="images/battlesheetp_board.png" draggable="true" class="land-piece board-tile" ondragstart="event.dataTransfer.setData('image/png', null)">
+        <img src="images/battlesheetp_board.png" draggable="true" class="land-piece board-tile" ondragstart="event.dataTransfer.setData('image/png', null)">
+        <img src="images/battlesheetp_board.png" draggable="true" class="land-piece board-tile" ondragstart="event.dataTransfer.setData('image/png', null)">
+      </div>
+    </div>
+    <!-- Playing Field -->
+    <div class="column-center">
+      <!-- Playing Field Header -->
+      <span>Playing Space</span>
+      <!-- Grid of divs for placement of tiles -->
+      <div>
+        <!-- First Row -->
+        <div class="drop-first-row">
+          <div class="dropzone" id="land-drop" ondragover="event.preventDefault()"></div>
+          <div class="dropzone" id="land-drop" ondragover="event.preventDefault()"></div>
+          <div class="dropzone" id="land-drop" ondragover="event.preventDefault()"></div>
+          <div class="dropzone" id="land-drop" ondragover="event.preventDefault()"></div>
+          <div class="dropzone" id="land-drop" ondragover="event.preventDefault()"></div>
+          <div class="dropzone" id="land-drop" ondragover="event.preventDefault()"></div>
+        </div>
+        <!-- Second Row -->
+        <div class="drop-second-row">
+          <div class="dropzone" id="land-drop" ondragover="event.preventDefault()"></div>
+          <div class="dropzone" id="land-drop" ondragover="event.preventDefault()"></div>
+          <div class="dropzone" id="land-drop" ondragover="event.preventDefault()"></div>
+          <div class="dropzone" id="land-drop" ondragover="event.preventDefault()"></div>
+          <div class="dropzone" id="land-drop" ondragover="event.preventDefault()"></div>
+        </div>
+        <!-- Third Row -->
+        <div class="drop-third-row">
+          <div class="dropzone" id="land-drop" ondragover="event.preventDefault()"></div>
+          <div class="dropzone" id="land-drop" ondragover="event.preventDefault()"></div>
+          <div class="dropzone" id="land-drop" ondragover="event.preventDefault()"></div>
+          <div class="dropzone" id="land-drop" ondragover="event.preventDefault()"></div>
+          <div class="dropzone" id="land-drop" ondragover="event.preventDefault()"></div>
+          <div class="dropzone" id="land-drop" ondragover="event.preventDefault()"></div>
+        </div>
+        <!-- Fourth row -->
+        <div class="drop-fourth-row">
+          <div class="dropzone" id="land-drop" ondragover="event.preventDefault()"></div>
+          <div class="dropzone" id="land-drop" ondragover="event.preventDefault()"></div>
+          <div class="dropzone" id="land-drop" ondragover="event.preventDefault()"></div>
+          <div class="dropzone" id="land-drop" ondragover="event.preventDefault()"></div>
+          <div class="dropzone" id="land-drop" ondragover="event.preventDefault()"></div>
+        </div>
+        <!-- Fifth row -->
+        <div class="drop-fifth-row">
+          <div class="dropzone" id="land-drop" ondragover="event.preventDefault()"></div>
+          <div class="dropzone" id="land-drop" ondragover="event.preventDefault()"></div>
+          <div class="dropzone" id="land-drop" ondragover="event.preventDefault()"></div>
+          <div class="dropzone" id="land-drop" ondragover="event.preventDefault()"></div>
+          <div class="dropzone" id="land-drop" ondragover="event.preventDefault()"></div>
+          <div class="dropzone" id="land-drop" ondragover="event.preventDefault()"></div>
+        </div>
+      </div>
+    </div>
+    <div class="column-right">
+      <span>Player Two</span>
+      <div class="land-div playerTwo">
+        <img src="images/battlesheetp_board.png" draggable="true" class="land-piece board-tile" ondragstart="event.dataTransfer.setData('image/png', null)">
+        <img src="images/battlesheetp_board.png" draggable="true" class="land-piece board-tile" ondragstart="event.dataTransfer.setData('image/png', null)">
+        <img src="images/battlesheetp_board.png" draggable="true" class="land-piece board-tile" ondragstart="event.dataTransfer.setData('image/png', null)">
+        <img src="images/battlesheetp_board.png" draggable="true" class="land-piece board-tile" ondragstart="event.dataTransfer.setData('image/png', null)">
+      </div>
+    </div>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.js"></script>
+    <script type="text/javascript" src="scripts/app.js"></script>
+  </body>
+</html>

@@ -1,0 +1,136 @@
+html, body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%; }
+
+*[draggable=true] {
+  -moz-user-select: none;
+  -khtml-user-drag: element;
+  cursor: move; }
+
+.column-left {
+  display: inline-block;
+  width: 14.06%;
+  height: 100%;
+  background-color: #b41414;
+  text-align: center;
+  float: left;
+  overflow: visible;
+  border-right: 2px solid black; }
+
+.column-center {
+  display: inline-block;
+  width: 71.55%;
+  height: 100%;
+  text-align: center;
+  background-color: #373737; }
+
+.column-right {
+  display: inline-block;
+  width: 14.06%;
+  height: 100%;
+  background-color: lightblue;
+  float: right;
+  text-align: center;
+  overflow: visible;
+  border-left: 2px solid black; }
+
+span {
+  font-size: 20px;
+  color: white;
+  border: 1px solid black;
+  border-radius: 5px;
+  padding: 10px 10px 5px 10px; }
+
+.land-piece {
+  display: block;
+  height: 200px;
+  weight: 150px;
+  z-index: 1; }
+
+.land-div {
+  margin-top: 20px;
+  margin-left: 20px; }
+
+#land-drop {
+  display: inline-block;
+  height: 200px;
+  width: 137px;
+  /* border: 2px dashed gray; */ }
+
+.drop-first-row {
+  margin-top: 10px;
+  width: 100%; }
+
+.drop-second-row {
+  width: 85%;
+  margin: 0 auto;
+  margin-top: -88px; }
+
+.drop-third-row {
+  width: 100%;
+  margin: 0 auto;
+  margin-top: -88px; }
+
+.drop-fourth-row {
+  width: 85%;
+  margin: 0 auto;
+  margin-top: -88px; }
+
+.drop-fifth-row {
+  width: 100%;
+  margin: 0 auto;
+  margin-top: -88px; }
+
+.sheep-piece {
+  top: 0;
+  left: 0;
+  height: 50px;
+  width: 50px;
+  margin: 0 auto;
+  z-index: 4; }
+
+.secondGridDivTop {
+  position: absolute;
+  display: inline;
+  margin: 0 auto;
+  width: 55px;
+  height: 55px;
+  z-index: 2;
+  border: 1px dashed red; }
+
+/*
+position: absolute;
+height: 400px;
+width: 400px;
+opacity: 0.2;
+background: yellow;
+z-index: 9001;
+*/
+.secondGridDivLeft {
+  position: absolute;
+  display: inline-block;
+  width: 55px;
+  height: 55px;
+  z-index: 2;
+  border: 1px dashed red; }
+
+.secondGridDivRight {
+  position: absolute;
+  display: inline-block;
+  width: 55px;
+  height: 55px;
+  z-index: 2;
+  border: 1px dashed red; }
+
+.secondGridDivBottom {
+  position: absolute;
+  display: block;
+  margin: 0 auto;
+  width: 55px;
+  height: 55px;
+  z-index: 2;
+  border: 1px dashed red; }
+
+/*# sourceMappingURL=stylesheet.css.map */
