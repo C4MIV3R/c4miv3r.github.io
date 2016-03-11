@@ -4,13 +4,22 @@ var placementTurnTotal=16;
 var dragged;
 var playerOneScore=0, playerTwoScore=0, playerThreeScore=0, playerFourScore=0;
 var playerOneTotalTokens=0, playerTwoTotalTokens=0, playerThreeTotalTokens=0, playerFourTotalTokens=0;
+var tokenArray = [[]];
+
+// it's definitely possible to create a stack of pieces
+// using an array, but scoring would be horribly off
+// using that method.
 
 // Creates tokens when the player's land pieces run out
 function createTokens(playerClass, color) {
   for(i=0;i <=15; i++) {
     var imgTag = '<img src="images/'+color+'_battlesheep.png" draggable="true" class="sheep-piece" ondragover="event.preventDefault()" />';
     var tokenColor = $(imgTag);
-    $(playerClass).append(tokenColor);
+    // attempt to set up and array with all images in it
+    // to create a stack of the pieces
+    tokenArray.push(imgTag);
+    $(playerClass).append(tokenArray);
+    // $(playerClass).append(tokenColor);
   }
 }
 // DOM observer that fires once player column is empty
@@ -143,30 +152,6 @@ $('.second-grid-top').on('click', function() {
   console.log('top toptppptptptptpttpptptpt');
 });
 */
-// SUPER WET CODE for making tokens
-// function createPlayerOneTokens() {
-//   for(i=0;i <=15; i++) {
-//     var whiteToken = $('<img src="images/white_battlesheep.png" draggable="true" class="sheep-piece" ondragover="event.preventDefault()" />');
-//     $('.playerOne').append(whiteToken);
-//   }
-// }
-// SUPER WET CODE for monitoring divs and when they become empty
-// $('.playerOne').bind('DOMSubtreeModified', function(e) {
-//   if(e.target.innerHTML <= 0) {
-//     if(playerOneCanOnlyFireOnce < 1) {
-//       createTokens('.playerOne', 'black');
-//       playerOneCanOnlyFireOnce++;
-//       playerOneTotalTokens = $('.playerOne').children().length;
-//       playerOneScore = 16 - playerOneTotalTokens;
-//     } else if(playerOneCanOnlyFireOnce === 1) {
-//       console.log(playerOneScore);
-//     }
-//     else {
-//       return null;
-//     }
-//   }
-// });
-//
 //  ------   mk img ------
 // var img = $('<img src=""/>');
 // -- change prop/attribute of img --

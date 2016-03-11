@@ -63,7 +63,10 @@ button {
   color: white;
   background: red;
   margin-left: 25px;
-  font-family: 'Montserrat', sans-serif; }
+  font-family: 'Montserrat', sans-serif;
+  outline: none;
+  border-radius: 5px;
+  box-shadow: 4px 4px rgba(43, 43, 43, 0.5); }
 
 .land-piece {
   position: absolute;
@@ -76,6 +79,12 @@ button {
   margin-top: 10px;
   margin-left: 20px; }
 
+#player-one-head {
+  z-index: 10; }
+
+#player-two-head {
+  z-index: 10; }
+
 .playerThree {
   position: absolute;
   width: 150px;
@@ -84,7 +93,8 @@ button {
 #player-three-head {
   position: absolute;
   bottom: 310px;
-  left: 18px; }
+  left: 25px;
+  z-index: 10; }
 
 .playerFour {
   position: absolute;
@@ -94,7 +104,8 @@ button {
 #player-four-head {
   position: absolute;
   bottom: 310px;
-  right: 25px; }
+  right: 18px;
+  z-index: 10; }
 
 #land-drop {
   display: inline-block;
@@ -235,11 +246,17 @@ z-index: 9001;
   background: red;
   margin-left: 25px; }
 
+#ruleButton:active {
+  background: #d42424; }
+
 #scoreButton {
   font-size: 20px;
   color: white;
   background: red;
   float: right;
   margin-right: 30px; }
+
+#scoreButton:active {
+  background: #d42424; }
 
 /*# sourceMappingURL=stylesheet.css.map */
