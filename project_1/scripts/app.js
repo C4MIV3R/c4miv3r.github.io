@@ -129,7 +129,6 @@ document.addEventListener('dragover', dragOver, false);
 document.addEventListener('dragenter', dragEnter, false);
 document.addEventListener('dragleave', dragLeave, false);
 document.addEventListener('drop', drop, false);
-
 $('#ruleButton').click(function() {
   $('.almighty-rules').fadeToggle(600,'swing');
 });
@@ -140,7 +139,13 @@ $('#scoreButton').click(function() {
   $('.pThreeScore').text('Player Three: '+playerThreeScore);
   $('.pFourScore').text('Player Four: '+playerFourScore);
 });
-
+// on TAB press - display Rules
+// document.addEventListener('keydown', function(e) {
+//   var code = e.keyCode || e.keyWhich;
+//   if(code === 9) {
+//   $('.almighty-rules').fadeToggle(600, 'swing');
+// }
+// });
 
 // NOTES AND WET CODE LOL
 /*
