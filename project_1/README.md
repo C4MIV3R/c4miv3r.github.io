@@ -13,11 +13,31 @@ ___
 * Players then count the number of hexagons their sheep are covering and that is their total score.
 * The player with the highest score wins!
 
-___
-
 ## Technology used:
 * HTML5
+  - Used for the basic structure of the page
 * HTML5 Drag and Drop
+  - This allowed elements to be moved from one area to another and stay
 * CSS3
+  - Used to style and position the elements on the page
 * Javascript
-* jQuery
+  - Used for handling the majority of dynamic actions on the page
+* jQuery 2.1.4
+  - Used for areas that I didn't want to type the entire javascript required
+
+## Approach
+
+* The first aspect I tackled was a basic layout to ensure I knew that elements were being moved from one area to another when they were dropped.
+* After that, I looked at the drag and drop capability that is crucial to make the game work. I stumbled across a jQuery library called Interact.js that looked promising, but instead just made drag and drop more confusing.
+* Having figured out drag and drop at a basic level (to allow the board pieces to be placed), I looked at it in more detail and how to layer another grid on top of the existing one that would accept elements to be dropped into it.
+* Once that was figured out, I moved on to writing more efficient code, score tracking, displaying rules and scores, and last - final styling to make sure everything looked good.
+
+## Unsolved Issues
+* I would have liked to find a way to track the players' scores and then automatically declare a winner, however, without having to manually look at the scores to decide. This may still be possible since I am tracking points per player, but am unsure of how to proceed.
+* I also would like to make this game playable on mobile, but am at a complete loss as to how ensure interactivity on mobile
+* I'm sure there's a better way to listen for certain elements to change and react based on those changes, but am unsure of those methods.
+
+## Resources
+
+*  [Game Idea and Assets](http://www.blueorangegames.com/index.php/games/battle-sheep)
+* [MDN - Drap and Drop](https://developer.mozilla.org/en-US/docs/Web/API/HTML_Drag_and_Drop_API)

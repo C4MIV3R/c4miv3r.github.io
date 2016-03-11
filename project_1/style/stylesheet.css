@@ -4,7 +4,8 @@ html, body {
   width: 100%;
   height: 100%;
   position: relative;
-  font-family: 'Montserrat', sans-serif; }
+  font-family: 'Montserrat', sans-serif;
+  overflow: hidden; }
 
 *[draggable=true] {
   -moz-user-select: none;
@@ -54,7 +55,8 @@ span {
   border: 2px solid black;
   border-radius: 5px;
   padding: 5px;
-  background-color: #787878; }
+  background-color: #787878;
+  box-shadow: 4px 4px rgba(43, 43, 43, 0.5); }
 
 button {
   font-size: 20px;
@@ -99,17 +101,17 @@ button {
   position: relative;
   height: 200px;
   width: 137px;
-  /* border: 2px dashed gray; */ }
+  /* border: 2px solid gray; */ }
 
 .first-grid {
-  margin-left: 40px; }
+  margin-left: 25px; }
 
 .drop-first-row {
   margin-top: 10px;
   width: 100%; }
 
 .drop-second-row {
-  width: 85%;
+  width: 83.5%;
   margin: 0 auto;
   margin-top: -88px; }
 
@@ -119,7 +121,7 @@ button {
   margin-top: -88px; }
 
 .drop-fourth-row {
-  width: 85%;
+  width: 83.5%;
   margin: 0 auto;
   margin-top: -88px; }
 
