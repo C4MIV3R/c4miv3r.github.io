@@ -15,11 +15,7 @@ function createTokens(playerClass, color) {
   for(i=0;i <=15; i++) {
     var imgTag = '<img src="images/'+color+'_battlesheep.png" draggable="true" class="sheep-piece" ondragover="event.preventDefault()" />';
     var tokenColor = $(imgTag);
-    // attempt to set up and array with all images in it
-    // to create a stack of the pieces
-    tokenArray.push(imgTag);
-    $(playerClass).append(tokenArray);
-    // $(playerClass).append(tokenColor);
+    $(playerClass).append(tokenColor);
   }
 }
 // DOM observer that fires once player column is empty
