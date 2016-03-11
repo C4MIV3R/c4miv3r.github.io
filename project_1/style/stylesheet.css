@@ -2,7 +2,9 @@ html, body {
   margin: 0;
   padding: 0;
   width: 100%;
-  height: 100%; }
+  height: 100%;
+  position: relative;
+  font-family: 'Montserrat', sans-serif; }
 
 *[draggable=true] {
   -moz-user-select: none;
@@ -32,32 +34,34 @@ html, body {
   position: relative;
   width: 14.06%;
   height: 100%;
-  background-color: lightblue;
+  background-color: #58b4c8;
   float: right;
   text-align: center;
   overflow: hidden;
   border-left: 2px solid black; }
 
 .playing-space-head {
-  margin-left: 250px;
+  margin-left: 275px;
   font-size: 20px;
   color: white;
-  border: 1px solid black;
+  border: 2px solid black;
   border-radius: 5px;
   padding: 10px 10px 5px 10px; }
 
 span {
   font-size: 20px;
   color: white;
-  border: 1px solid black;
+  border: 2px solid black;
   border-radius: 5px;
-  padding: 5px; }
+  padding: 5px;
+  background-color: #787878; }
 
 button {
   font-size: 20px;
   color: white;
   background: red;
-  margin-left: 25px; }
+  margin-left: 25px;
+  font-family: 'Montserrat', sans-serif; }
 
 .land-piece {
   position: absolute;
@@ -78,7 +82,7 @@ button {
 #player-three-head {
   position: absolute;
   bottom: 310px;
-  left: 30px; }
+  left: 18px; }
 
 .playerFour {
   position: absolute;
@@ -88,7 +92,7 @@ button {
 #player-four-head {
   position: absolute;
   bottom: 310px;
-  right: 35px; }
+  right: 25px; }
 
 #land-drop {
   display: inline-block;
@@ -181,12 +185,59 @@ z-index: 9001;
   padding-top: 5px; }
 
 .almighty-rules {
-  display: inline;
+  display: none;
   position: absolute;
-  margin-left: -1000px;
-  width: 100%;
-  height: 100%;
-  background-color: #5c5d66;
-  color: white; }
+  top: 100px;
+  left: 190px;
+  width: 70%;
+  height: 70%;
+  background-color: rgba(120, 120, 120, 0.8);
+  color: rgba(255, 255, 255, 0.8);
+  z-index: 8;
+  border: 2px solid rgba(0, 0, 0, 0.8);
+  border-radius: 5px;
+  box-shadow: 4px 4px rgba(43, 43, 43, 0.5); }
+  .almighty-rules h1 {
+    text-align: center;
+    font-size: 45px; }
+  .almighty-rules p {
+    margin-left: 35px;
+    margin-right: 35px; }
+  .almighty-rules p:last-child {
+    text-align: center;
+    font-size: 25px; }
+
+.almighty-scores {
+  display: none;
+  position: absolute;
+  top: 175px;
+  left: 310px;
+  width: 50%;
+  height: 50%;
+  text-align: center;
+  background-color: rgba(120, 120, 120, 0.8);
+  color: rgba(255, 255, 255, 0.8);
+  z-index: 9;
+  border: 2px solid rgba(0, 0, 0, 0.8);
+  border-radius: 5px;
+  box-shadow: 4px 4px rgba(43, 43, 43, 0.5); }
+  .almighty-scores h1 {
+    font-size: 45px; }
+  .almighty-scores h4 {
+    margin-left: 55px;
+    margin-right: 55px; }
+
+#ruleButton {
+  font-size: 20px;
+  color: white;
+  background: red;
+  margin-left: 25px; }
+
+#scoreButton {
+  font-size: 20px;
+  color: white;
+  background: red;
+  float: right;
+  margin-right: 30px; }
 
 /*# sourceMappingURL=stylesheet.css.map */

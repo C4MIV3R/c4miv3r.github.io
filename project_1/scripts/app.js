@@ -1,45 +1,11 @@
-
-//  ------   mk img ------
-// var img = $('<img src=""/>');
-// -- change prop/attribute of img --
-// img.prop('src', 'http://....');
-// --- select a css class or DOM element and append img ---
-// $('body').append(img);
-
-
 // global variables
 var placementTurn=0;
 var placementTurnTotal=16;
 var dragged;
-var playerOneScore, playerTwoScore, playerThreeScore, playerFourScore = 0;
-var playerOneTotalTokens, playerTwoTotalTokens, playerThreeTotalTokens, playerFourTotalTokens;
+var playerOneScore=0, playerTwoScore=0, playerThreeScore=0, playerFourScore=0;
+var playerOneTotalTokens=0, playerTwoTotalTokens=0, playerThreeTotalTokens=0, playerFourTotalTokens=0;
 
-// var playerOne = {
-//
-// }
-
-// once a player's tokens are exhausted game spits out score
-// currently not working due to when last token removed
-// does not add one to the playerScore because the div no
-// longer has any children to add to the score
-
-while(playerOneTotalTokens >= 1 && playerTwoTotalTokens >= 1 && playerThreeTotalTokens >= 1 && playerFourTotalTokens >= 1) {
-  if(Math.max(playerOneScore,playerTwoScore,)) {
-    console.log('Player One wins! The score is: Player One: '+playerOneScore+' - '+playerTwoScore+' : Player Two');
-  } else if(playerTwoScore > playerOneScore) {
-    console.log('Player Two wins! The score is: Player One: '+playerOneScore+' - '+playerTwoScore+' : Player Two');
-  } else if (){
-    console.log('Tie! Whoadathunk!?');
-  }
-}
-// function rules() {
-//   // rules should slide over on top of game or fadeIn
-// }
-// function whoWins() {
-//   $.eq(Math.max(playerOneScore,playerTwoScore,playerThreeScore,playerFourScore));
-// }
-// console.log(whoWins());
-
+// Creates tokens when the player's land pieces run out
 function createTokens(playerClass, color) {
   for(i=0;i <=15; i++) {
     var imgTag = '<img src="images/'+color+'_battlesheep.png" draggable="true" class="sheep-piece" ondragover="event.preventDefault()" />';
@@ -56,7 +22,7 @@ function monitorAPlayer(playerClass, color, playerScoreVar, fireCount) {
         createTokens(playerClass, color)
         fireCount++;
       } else if (fireCount >= 1) {
-        console.log('These aren\'t the droids you\'re looking for.');
+        // console.log('These aren\'t the droids you\'re looking for.');
       } else {
         return null;
       }
@@ -117,9 +83,9 @@ function drop(e) {
     placementTurn++;                              // add one to placementTurn
     if(placementTurn >= placementTurnTotal) {     // used as a check to see if the max number of board tiles have been played
       $('.dropzone').removeClass('dropzone');     // remove dropzone classes from all divs to prevent movement of board
-      console.log("We go in! We kill!");          // We go iiinnnnn. We kiiilllll.
+      // console.log("We go in! We kill!");          // We go iiinnnnn. We kiiilllll.
     } else {
-      console.log("Soon my dog of war...");       // You just... you just wait!
+      // console.log("Soon my dog of war...");       // You just... you just wait!
     }
   } else if(e.target.className === "dropzoneOne") {
     e.target.style.background = "";
@@ -128,21 +94,21 @@ function drop(e) {
       if(playerParentNode.className === 'land-div playerOne') {
         playerOneTotalTokens = $('.playerOne').children().length;
         playerOneScore = 17 - playerOneTotalTokens;
-        console.log(playerOneScore);
+        // console.log(playerOneScore);
       } else if(playerParentNode.className === 'land-div playerTwo') {
         playerTwoTotalTokens = $('.playerTwo').children().length;
         playerTwoScore = 17 - playerTwoTotalTokens;
-        console.log(playerTwoScore);
+        // console.log(playerTwoScore);
       } else if(playerParentNode.className === 'land-div playerThree') {
         playerThreeTotalTokens = $('.playerThree').children().length;
         playerThreeScore = 17 - playerThreeTotalTokens;
-        cosole.log(playerThreeScore);
+        // console.log(playerThreeScore);
       } else if(playerParentNode.className === 'land-div playerFour') {
         playerFourTotalTokens = $('.playerFour').children().length;
         playerFourScore = 17 - playerFourTotalTokens;
-        console.log(playerFourScore);
+        // console.log(playerFourScore);
       } else {
-        console.log('wat');
+        // console.log('wat');
       }
     dragged.parentNode.removeChild(dragged);
     e.target.appendChild(dragged);
@@ -158,10 +124,20 @@ document.addEventListener('dragover', dragOver, false);
 document.addEventListener('dragenter', dragEnter, false);
 document.addEventListener('dragleave', dragLeave, false);
 document.addEventListener('drop', drop, false);
-// button.addEventListener('click', rules, false);
+
+$('#ruleButton').click(function() {
+  $('.almighty-rules').fadeToggle(600,'swing');
+});
+$('#scoreButton').click(function() {
+  $('.almighty-scores').fadeToggle(600,'swing');
+  $('.pOneScore').text('Player One: '+playerOneScore);
+  $('.pTwoScore').text('Player Two: '+playerTwoScore);
+  $('.pThreeScore').text('Player Three: '+playerThreeScore);
+  $('.pFourScore').text('Player Four: '+playerFourScore);
+});
 
 
-// NOTES AND TERRIBLE CODE LOL
+// NOTES AND WET CODE LOL
 /*
 $('.second-grid-top').on('click', function() {
   console.log('top toptppptptptptpttpptptpt');
@@ -190,3 +166,10 @@ $('.second-grid-top').on('click', function() {
 //     }
 //   }
 // });
+//
+//  ------   mk img ------
+// var img = $('<img src=""/>');
+// -- change prop/attribute of img --
+// img.prop('src', 'http://....');
+// --- select a css class or DOM element and append img ---
+// $('body').append(img);

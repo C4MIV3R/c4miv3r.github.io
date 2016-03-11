@@ -3,24 +3,31 @@
   <head>
     <meta charset="utf-8">
     <title>Battle Sheep!</title>
+    <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="style/stylesheet.css" media="screen" title="no title" charset="utf-8">
   </head>
   <body>
     <!-- hidden rules div -->
-    <!-- <div class="almighty-rules">
+    <div class="almighty-rules">
       <h1>Rules</h1>
-        <ul>
-          <li>Player 1 places their first land piece anywhere onto the grid.</li>
-          <li>Players then take turn placing their land pieces down until no pieces are remaining.</li>
-          <li>Land pieces MUST remain connected by at least one side. The board may contain holes in it.</li>
-          <li>Players then are given 16 sheep tiles to place on top of the newly constructed board.</li>
-          <li>Players first place a sheep somewhere on the edge of the game board.</li>
-          <li>Players then place another sheep tile extending in any direction as far as they can go, either until they hit the edge of the board or another sheep, from any existing sheep tiles of theirs.</li>
-          <li>Play continues like this until all players are unable to move anywhere on the board anymore.</li>
-          <li>Players then count the number of hexagons their sheep are covering and that is their total score.</li>
-          <li>The player with the highest score wins!</li>
-        </ul>
-    </div> -->
+          <p>Player 1 places their first land piece anywhere onto the grid.</p>
+          <p>Players then take turns placing their land pieces down until no pieces are remaining.</p>
+          <p>Land pieces MUST remain connected by at least one side. The board may contain holes in it.</p>
+          <p>Players then are given 16 sheep tiles to place on top of the newly constructed board.</p>
+          <p>Players first place a sheep somewhere on the edge of the game board.</p>
+          <p>Players then place another sheep tile extending in any direction as far as they can go, either until they hit the edge of the board or another sheep, from any existing sheep tiles of theirs.</li>
+          <p>Play continues like this until all players are either unable to move anywhere on the board or have no remaining tiles.</p>
+          <p>Players then count the number of hexagons their sheep are covering and that is their total score.</p>
+          <p>The player with the highest score wins!</p>
+    </div>
+    <div class="almighty-scores">
+      <h1>Scoreboard</h1>
+        <h4 class="pOneScore"></h4>
+        <h4 class="pTwoScore">To be added</h4>
+        <h4 class="pThreeScore">To be added</h4>
+        <h4 class="pFourScore">To be added</h4>
+
+    </div>
     <!-- end of rules div -->
     <!-- Player One's column -->
     <div class="column-left">
@@ -46,11 +53,12 @@
     <!-- end of Player One's column -->
     <!-- begin Playing Field -->
     <div class="column-center">
-        <button>Rules</button>
+        <button id="ruleButton">Rules</button>
       <!-- Playing Field Header -->
       <span class="playing-space-head">Playing Space</span>
       <!-- Grid of divs for placement of tiles -->
       <!-- div containing the entirity of the first grid -->
+      <button id="scoreButton">Score</button>
       <div class="first-grid">
         <!-- First Row -->
         <div class="drop-first-row">
