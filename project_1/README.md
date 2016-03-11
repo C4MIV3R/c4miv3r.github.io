@@ -34,6 +34,7 @@ ___
 
 ## Unsolved Issues
 * I would have liked to find a way to track the players' scores and then automatically declare a winner, however, without having to manually look at the scores to decide. This may still be possible since I am tracking points per player, but am unsure of how to proceed.
+* Current version does not play like original due to inability to stack tokens and split the stacks. Will look into for later versions.
 * I also would like to make this game playable on mobile, but am at a complete loss as to how ensure interactivity on mobile
 * I'm sure there's a better way to listen for certain elements to change and react based on those changes, but am unsure of those methods.
 * The grid for placing the land pieces is also less detailed than I would have liked. I believe there is a better way to create the first grid that would allow for a more detailed positioning of pieces.
