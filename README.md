@@ -1,2 +1,9 @@
 # psicoh.github.io
-My second awesome website. :)
+----
+
+### Project housing repo for GA
+* Project 1
+  * Battle Sheep board game
+
+  ----
+## More to come
