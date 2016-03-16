@@ -1,26 +1,42 @@
+// begin window.onload funtion
+window.onload = function() {
+  
+}
 // global variables
 var placementTurn=0;
 var placementTurnTotal=16;
 var dragged;
 var playerOneScore=0, playerTwoScore=0, playerThreeScore=0, playerFourScore=0;
-var playerOneTotalTokens=0, playerTwoTotalTokens=0, playerThreeTotalTokens=0, playerFourTotalTokens=0;
-var tokenArray = [[]];
+var tokenArray = [ ];
 
-// it's definitely possible to create a stack of pieces
-// using an array, but scoring would be horribly off
-// using that method.
+// push stack of images into array, print array of images once
+// edit createTokens to push images into array, then print array once??
+// it may stack images just like with land pieces, but it will allow
+// for stacks of pieces just like needed to play the game
 
-// Creates tokens when the player's land pieces run out
+// TESTING function createTokens
 function createTokens(playerClass, color) {
   for(i=0;i <=15; i++) {
     var imgTag = '<img src="images/'+color+'_battlesheep.png" draggable="true" class="sheep-piece" ondragover="event.preventDefault()" />';
-    var tokenColor = $(imgTag);
-    $(playerClass).append(tokenColor);
+    var tokenColor = imgTag;
+    tokenArray.push(tokenColor);
   }
+  $(playerClass).append(tokenArray);
 }
+// end TESTING function
+
+// Production version of function
+// Creates tokens when the player's land pieces run out
+// function createTokens(playerClass, color) {
+//   for(i=0;i <=15; i++) {
+//     var imgTag = '<img src="images/'+color+'_battlesheep.png" draggable="true" class="sheep-piece" ondragover="event.preventDefault()" />';
+//     var tokenColor = imgTag;
+//     $(playerClass).append(tokenColor);
+//   }
+// }
 // DOM observer that fires once player column is empty
 // and only once
-function monitorAPlayer(playerClass, color, playerScoreVar, fireCount) {
+function monitorAPlayer(playerClass, color, fireCount) {
   $(playerClass).bind('DOMSubtreeModified', function(e) {
     if(e.target.innerHTML <= 0) {
       if(fireCount < 1) {
@@ -34,11 +50,44 @@ function monitorAPlayer(playerClass, color, playerScoreVar, fireCount) {
     }
   });
 }
+// track player scores
+function scoreboardTracking() {
+  var playerParentNode = dragged.parentNode;
+  // console.log(dragged.parentNode.className);
+    if(playerParentNode.className === 'land-div playerOne') {
+      var playerTotalTokens = $('.playerOne').children().length;
+      playerOneScore = 17 - playerTotalTokens;
+      // console.log(playerOneScore);
+    } else if(playerParentNode.className === 'land-div playerTwo') {
+      var playerTotalTokens = $('.playerTwo').children().length;
+      playerTwoScore = 17 - playerTotalTokens;
+      // console.log(playerTwoScore);
+    } else if(playerParentNode.className === 'land-div playerThree') {
+      var playerTotalTokens = $('.playerThree').children().length;
+      playerThreeScore = 17 - playerTotalTokens;
+      // console.log(playerThreeScore);
+    } else if(playerParentNode.className === 'land-div playerFour') {
+      var playerTotalTokens = $('.playerFour').children().length;
+      playerFourScore = 17 - playerTotalTokens;
+      // console.log(playerFourScore);
+    } else {
+      // console.log('wat');
+    }
+}
+// create secondary grid once a land piece is dropped
+function secondaryGrid(e) {
+  var secondGridDivTop = $('<div class="dropzoneOne" id="second-grid-top" ondragover="event.preventDefault()"></div>');
+  var secondGridDivLeft = $('<div class="dropzoneOne" id="second-grid-left" ondragover="event.preventDefault()"></div>');
+  var secondGridDivRight = $('<div class="dropzoneOne" id="second-grid-right" ondragover="event.preventDefault()"></div>');
+  var secondGridDivBottom = $('<div class="dropzoneOne" id="second-grid-bottom" ondragover="event.preventDefault()"></div>');
+  var divTarget = e.target;
+  $(divTarget).append(secondGridDivTop, secondGridDivLeft, secondGridDivRight, secondGridDivBottom); // add second grid over the first to lock pieces into position
+}
 // player one test
-monitorAPlayer('.playerOne', 'black', playerOneScore, 0);
-monitorAPlayer('.playerTwo', 'red', playerTwoScore, 0);
-monitorAPlayer('.playerThree', 'white', playerThreeScore, 0);
-monitorAPlayer('.playerFour', 'blue', playerFourScore, 0);
+monitorAPlayer('.playerOne', 'black', 0);
+monitorAPlayer('.playerTwo', 'red', 0);
+monitorAPlayer('.playerThree', 'white', 0);
+monitorAPlayer('.playerFour', 'blue', 0);
 
 // draggable functions
 function drag(e) {
@@ -79,11 +128,7 @@ function drop(e) {
     dragged.parentNode.removeChild(dragged);
     e.target.appendChild(dragged);
     var divTarget = e.target;
-    var secondGridDivTop = $('<div class="dropzoneOne" id="second-grid-top" ondragover="event.preventDefault()"></div>');
-    var secondGridDivLeft = $('<div class="dropzoneOne" id="second-grid-left" ondragover="event.preventDefault()"></div>');
-    var secondGridDivRight = $('<div class="dropzoneOne" id="second-grid-right" ondragover="event.preventDefault()"></div>');
-    var secondGridDivBottom = $('<div class="dropzoneOne" id="second-grid-bottom" ondragover="event.preventDefault()"></div>');
-    $(divTarget).append(secondGridDivTop, secondGridDivLeft, secondGridDivRight, secondGridDivBottom); // add second grid over the first to lock pieces into position
+    secondaryGrid(e);
     dragged.setAttribute('draggable', false);     // remove draggable ability from board pieces once they are placed
     placementTurn++;                              // add one to placementTurn
     if(placementTurn >= placementTurnTotal) {     // used as a check to see if the max number of board tiles have been played
@@ -94,31 +139,14 @@ function drop(e) {
     }
   } else if(e.target.className === "dropzoneOne") {
     e.target.style.background = "";
-    var playerParentNode = dragged.parentNode;
-    // console.log(dragged.parentNode.className);
-      if(playerParentNode.className === 'land-div playerOne') {
-        playerOneTotalTokens = $('.playerOne').children().length;
-        playerOneScore = 17 - playerOneTotalTokens;
-        // console.log(playerOneScore);
-      } else if(playerParentNode.className === 'land-div playerTwo') {
-        playerTwoTotalTokens = $('.playerTwo').children().length;
-        playerTwoScore = 17 - playerTwoTotalTokens;
-        // console.log(playerTwoScore);
-      } else if(playerParentNode.className === 'land-div playerThree') {
-        playerThreeTotalTokens = $('.playerThree').children().length;
-        playerThreeScore = 17 - playerThreeTotalTokens;
-        // console.log(playerThreeScore);
-      } else if(playerParentNode.className === 'land-div playerFour') {
-        playerFourTotalTokens = $('.playerFour').children().length;
-        playerFourScore = 17 - playerFourTotalTokens;
-        // console.log(playerFourScore);
-      } else {
-        // console.log('wat');
-      }
+    scoreboardTracking();
     dragged.parentNode.removeChild(dragged);
     e.target.appendChild(dragged);
     dragged.setAttribute('draggable', false);
   }
+}
+function touchStart(e) {
+
 }
 
 // events fired on draggable target
@@ -129,6 +157,9 @@ document.addEventListener('dragover', dragOver, false);
 document.addEventListener('dragenter', dragEnter, false);
 document.addEventListener('dragleave', dragLeave, false);
 document.addEventListener('drop', drop, false);
+// document.addEventListener('touch', touchstart ,false);
+
+// clickable rules and score button
 $('#ruleButton').click(function() {
   $('.almighty-rules').fadeToggle(600,'swing');
 });
@@ -139,19 +170,24 @@ $('#scoreButton').click(function() {
   $('.pThreeScore').text('Player Three: '+playerThreeScore);
   $('.pFourScore').text('Player Four: '+playerFourScore);
 });
-// on TAB press - display Rules
+// end window.onLoad function
+
+// on ~ press - display Rules
 // document.addEventListener('keydown', function(e) {
 //   var code = e.keyCode || e.keyWhich;
-//   if(code === 9) {
-//   $('.almighty-rules').fadeToggle(600, 'swing');
+//   if(code === 192) {
+//   $('.almighty-rules').fadeToggle(600,'swing');
 // }
 // });
-
-// NOTES AND WET CODE LOL
+// // on TAB press - display Scoreboard
+// document.addEventListener('keydown', function(e) {
+//   var code = e.keyCode || e.keyWhich;
+//   if(code === 49) {
+//     $('.almighty-scores').fadeToggle(600,'swing');
+//   }
+// });
+// Notes
 /*
-$('.second-grid-top').on('click', function() {
-  console.log('top toptppptptptptpttpptptpt');
-});
 */
 //  ------   mk img ------
 // var img = $('<img src=""/>');
