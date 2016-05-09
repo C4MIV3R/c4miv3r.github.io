@@ -1,7 +1,8 @@
 
 ![Battle Sheep](http://geekdad.com/wp-content/uploads/2015/06/BattleSheep-featured.jpg)
 
-# Original copyright Blue Orange Games as seen here:
+# Copyright:
+* I do not own this game. Nor do I intend to advertise as such. This game was created by Blue Orange Games. Link to their store below:
 * [Battle Sheep](http://www.blueorangegames.com/index.php/games/battle-sheep)
 
 ## Rules
