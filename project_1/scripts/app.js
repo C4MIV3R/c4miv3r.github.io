@@ -1,6 +1,6 @@
-// begin window.onload funtion
+ s// begin window.onload funtion
 window.onload = function() {
-  
+
 }
 // global variables
 var placementTurn=0;
@@ -145,9 +145,9 @@ function drop(e) {
     dragged.setAttribute('draggable', false);
   }
 }
-function touchStart(e) {
-
-}
+// function touchStart(e) {
+//
+// }
 
 // events fired on draggable target
 document.addEventListener('drag', drag, false);

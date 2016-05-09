@@ -1,0 +1,116 @@
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Open Sans', Arial, sans-serif;
+  font-weight: bold;
+  margin-bottom: 0;
+}
+p {
+  font-family: 'Open Sans', Arial, sans-serif;
+  font-size: 16px;
+  line-height: 1.5em;
+  margin: 0;
+}
+/*
+.row {
+  display: flex;
+}
+.col-4 {
+flex-basis: 33.3%;
+}
+.col-6 {
+  flex-basis: 2;
+}
+.col-8 {
+  flex-basis: 63.64%;
+}*/
+.container {
+  padding: 0 20px;
+}
+.row {
+  width: 1140px;
+  margin: auto;
+}
+
+/*
+  width: 1140
+  margin: 3%
+*/
+.col-1 {
+  float: left;
+  width: 5.33%;
+  margin-right: 3%;
+}
+.col-2 {
+  float: left;
+  margin-right: 3%;
+
+}
+.col-3 {
+  float: left;
+  margin-right: 3%;
+  width: 21.99%;
+
+}
+.col-4 {
+  float: left;
+  margin-right: 3%;
+  width: 30.33%
+}
+.col-5 {
+  float: left;
+  margin-right: 3%;
+  width: 38.65%;
+}
+.col-6 {
+  float: left;
+  margin-right: 3%;
+  width: 46.98%;
+}
+.col-7 {
+  float: left;
+  margin-right: 3%;
+  width: 55.31%;
+}
+.col-8 {
+  float: left;
+  margin-right: 3%;
+  width: 63.64%;
+}
+.col-9 {
+  float: left;
+  margin-right: 3%;
+  width: 71.97%;
+}
+.col-10 {
+  float: left;
+  margin-right: 3%;
+  width: 80.3%;
+}
+.col-11 {
+  float: left;
+  margin-right: 3%;
+  width: 88.66%;
+}
+.col-12{
+  float: left;
+  margin-right: 0%;
+  width: 99.96%;
+}
+@media only screen and (max-width: 940px) {
+  .responsive {
+    display: block;
+    transform: rotate(12000deg);
+    transition: all 15s ease-in-out;
+  }
+}
+
+.mobile {
+  display: none;
+}
+
+@media handheld, only screen and (max-device-width: 450px) {
+  .mobile {
+    display: block;
+    font-size: 4em;
+    color: red;
+  }
+}

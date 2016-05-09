@@ -1,76 +1,37 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <link rel="stylesheet" href="css/style.css" media="screen" title="no title" charset="utf-8"/>
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,700' rel='stylesheet' type='text/css'/>
     <meta charset="utf-8">
-    <title>Shopping Cart</title>
+    <title>Cam Iverson | Web Dev</title>
   </head>
-  <script type="text/javascript">
-  var itemsToBeReviewed = [];
-  var itemsToBeReviewedLocation = [];
-  function reportInvalidItem(product,location){
-    //sendMail('boss','boss@newco.nu','product');
-    itemsToBeReviewed.push(product);
-    itemsToBeReviewedLocation.push(location);
-  };
-  var prices = [
-    3.14,
-    69.99,
-    "meow"
-  ];
-  var totalPrice = 0;
-  var products = [
-    "Apple Pie",
-    "Auto Cat Feeder",
-    70.89
-  ];
-
-  console.log('Shopping Cart App');
-  console.log('-----------------');
-  console.log('We have found the following items in your cart:')
-  console.log(prices);
-  console.log(products);
-  console.log('-----------------');
-
-  // loop thru all the things
-  prices.forEach(function(item) {
-
-    if(typeof item == 'number'){
-      totalPrice = totalPrice + item;
-    } else {
-      // throw new Error("Whoops, someone entered NaN");
-      // console.log(item);
-      // console.log('has bad datazz');
-      reportInvalidItem(item, prices.indexOf(item));
-    }
-    // console.log(item);
-  });
-
-  console.log('Your total price is:');
-  console.log('-----------------');
-
-  console.log('$'+totalPrice);
-
-  console.log('-----------------');
-  console.log('We have found invalid items in your cart.');
-  console.log('They have been removed and your total does not reflect their price.')
-  console.log('-----------------');
-
-  console.log(itemsToBeReviewed);
-  console.log(itemsToBeReviewedLocation);
-
-  console.log('-----------------');
-  console.log('Thanks for using Phamazon. :)');
-  console.log('-----------------');
-  </script>
   <body>
-    My first shopping cart experience.
-    <section>
-      <article>
-        <h3>My article title</h3>
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-        </p>
-      </article>
-    </section>
+    <h1 class="responsive mobile">I am responsive</h1>
+    <h1 class="mobile">I am mobile</h1>
+    <header class="container">
+        <div class="row">
+          <div class="col-6">
+            <h1>Cam Iverson</h1>
+          </div>
+          <nav class="col-6">
+            <ul>
+              <li><a href="#home">Home</a></li>
+              <li><a href="#about">About Me</a></li>
+              <li><a href="#portfolio">Portfolio</a></li>
+            </ul>
+          </nav>
+        </div>
+    </header>
+    <main class="container">
+      <div class="row">
+        <div class="col-8">
+          Main Content
+        </div>
+        <aside class="col-4">
+            Sidebar
+        </aside>
+      </div>
+    </main>
   </body>
 </html>

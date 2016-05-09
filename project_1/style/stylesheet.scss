@@ -1,4 +1,5 @@
 html, body {
+  font-size: 16px;
   margin: 0;
   padding: 0;
   width: 100%;
@@ -10,7 +11,7 @@ html, body {
 *[draggable=true] {
   -moz-user-select:none;
   -khtml-user-drag: element;
-  cursor: move;
+  cursor: grab;
 }
 .column-left {
   display: inline-block;
@@ -270,59 +271,13 @@ z-index: 9001;
 }
 
 // all dimensions in  Width x Height
-@media (max-width: 1210px) {
-  .column-left {
-    width: 8%;
-    height: 100%;
-  }
-  .column-center {
-    width: 80%;
-    height: 100%;
-  }
-  .column-right {
-    width: 8%;
-    height: 100%;
+@media (max-width: 1200px) {
+  html {
+    font-size: 14px;
   }
 }
 @media (max-width: 800px) {
-  .column-left {
-    width: 5%;
-    height: 100%;
-  }
-  .column-center {
-    width: 80%;
-    height: 100%;
-  }
-  .column-right {
-    width: 5%;
-    height: 100%;
-  }
-}
-@media (max-width: 500px) {
-  .column-left {
-    width: 5%;
-    height: 100%;
-  }
-  .column-center {
-    width: 50%;
-    height: 100%;
-  }
-  .column-right {
-    width: 5%;
-    height: 100%;
-  }
-}
-@media (max-width: 260px) {
-  .column-left {
-    width: 5%;
-    height: 100%;
-  }
-  .column-center {
-    width: 90%;
-    height: 100%;
-  }
-  .column-right {
-    width: 5%;
-    height: 100%;
+  html {
+    font-size: 12px;
   }
 }
