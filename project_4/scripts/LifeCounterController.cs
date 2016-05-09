@@ -1,3 +1,5 @@
+// Copyright 2016 Cameron Iverson
+
 // TO DO:
 // Number of lives working - DONE
 

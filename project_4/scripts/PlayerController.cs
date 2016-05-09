@@ -1,3 +1,5 @@
+// Copyright 2016 Cameron Iverson
+
 // Throughout all scripts - ~500 lines of code so far (May 5th, 2016)
 
 // TO DO:

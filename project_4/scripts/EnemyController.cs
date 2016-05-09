@@ -1,3 +1,5 @@
+// Copyright 2016 Cameron Iverson
+
 // TO DO:
 // Enemy AI - on player entering trigger area - begin tracking and firing at player - MVP done
 // Patrol routes

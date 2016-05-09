@@ -1,3 +1,5 @@
+// Copyright 2016 Cameron Iverson
+
 using UnityEngine;
 using System.Collections;
 

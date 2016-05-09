@@ -1,3 +1,5 @@
+// Copyright 2016 Cameron Iverson
+
 // TO DO:
 // Shooting bullets left - DONE
 // On bullet collision wth enemy - destroy bullet - DONE
