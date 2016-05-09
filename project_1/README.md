@@ -1,6 +1,8 @@
 
 ![Battle Sheep](http://geekdad.com/wp-content/uploads/2015/06/BattleSheep-featured.jpg)
-___
+
+# Original copyright Blue Orange Games as seen here:
+* [Battle Sheep](http://www.blueorangegames.com/index.php/games/battle-sheep)
 
 ## Rules
 * Player 1 places their first land piece anywhere onto the grid.
