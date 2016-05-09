@@ -1,5 +1,5 @@
 # Project PSIcoh
------------
+
 ### A 2D Platformer/Shooter game built in Unity
 While at a programming bootcamp, I found myself building games as my projects throughout the bootcamp. So for my final project, I decided to work on a full fledged video game using Unity. I started working in Unity and taught myself C# in order to program the various scripts in the game.
 
