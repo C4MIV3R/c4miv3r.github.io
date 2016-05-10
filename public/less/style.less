@@ -1,1 +1,53 @@
-@variable = #ff0000;
+// -------- Variable declarations ------------
+@navbar-background: #fff;
+@primary: #1EAEDB;
+
+body {
+  padding-top: 5rem;
+  font-family: 'Roboto Condensed', sans-serif;
+}
+
+a {
+  color: #00B7FF;
+}
+// -------------- Navbar styles -----------------
+.navbar {
+  position: fixed;
+  display: block;
+  width: 100%;
+  top: 0;
+  left: 0;
+  height: 5.5rem;
+  background: @navbar-background;
+  z-index: 99;
+  border-bottom: 1px solid #000;
+  .navbar-list {
+    list-style: none;
+    .navbar-item {
+      display: inline;
+      .navbar-link {
+        text-decoration: none;
+        color: #000;
+        text-transform: uppercase;
+        font-size: 12px;
+        font-weight: 600;
+        letter-spacing: .2rem;
+        margin-right: 35px;
+        transition: color 0.2s ease;
+      }
+      .navbar-link:hover {
+        color: @primary;
+      }
+    }
+  }
+}
+
+// ------------- Section Spacing ---------------
+.header {
+  margin-top: 7rem;
+  text-align: center;
+}
+.page-content {
+  margin-top: 7rem;
+  text-align: center;
+}

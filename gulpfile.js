@@ -1,12 +1,12 @@
 var gulp    = require('gulp'),
-    watch   = require('gulp-watch'),
-    less    = require('gulp-less');
+    less    = require('gulp-less'),
+    watch   = require('gulp-watch');
 
 // gulp task for less
 gulp.task('less', function() {
-  return gulp.src('public/less/style.css')
+  gulp.src('./public/less/style.less')
   .pipe(less())
-  .pipe(gulp.dest('public/styles/stylesheet.css'));
+  .pipe(gulp.dest('./public/styles/'));
 });
 
 // gulp watch
