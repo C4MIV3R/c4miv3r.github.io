@@ -15,25 +15,25 @@ var tokenArray = [];
 // for stacks of pieces just like needed to play the game
 
 // TESTING function createTokens
-function createTokens(playerClass, color) {
-  for(i=0;i <=15; i++) {
-    var imgTag = '<img src="images/'+color+'_battlesheep.png" draggable="true" class="sheep-piece" ondragover="event.preventDefault()" />';
-    var tokenColor = imgTag;
-    tokenArray.push(tokenColor);
-  }
-  $(playerClass).append(tokenArray);
-}
-// end TESTING function
-
-// Production version of function
-// Creates tokens when the player's land pieces run out
 // function createTokens(playerClass, color) {
 //   for(i=0;i <=15; i++) {
 //     var imgTag = '<img src="images/'+color+'_battlesheep.png" draggable="true" class="sheep-piece" ondragover="event.preventDefault()" />';
 //     var tokenColor = imgTag;
-//     $(playerClass).append(tokenColor);
+//     tokenArray.push(tokenColor);
 //   }
+//   $(playerClass).append(tokenArray);
 // }
+// end TESTING function
+
+// Production version of function
+// Creates tokens when the player's land pieces run out
+function createTokens(playerClass, color) {
+  for(i=0;i <=15; i++) {
+    var imgTag = '<img src="images/'+color+'_battlesheep.png" draggable="true" class="sheep-piece" ondragover="event.preventDefault()" />';
+    var tokenColor = imgTag;
+    $(playerClass).append(tokenColor);
+  }
+}
 // DOM observer that fires once player column is empty
 // and only once
 function monitorAPlayer(playerClass, color, fireCount) {
