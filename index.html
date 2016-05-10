@@ -1,27 +1,91 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <link rel="stylesheet" href="public/styles/normalize.css" type="text/css">
-    <link rel="stylesheet" href="public/styles/skeleton.css" type="text/css">
-    <link rel="stylesheet" href="public/styles/style.css" type="text/css">
-    <link href='https://fonts.googleapis.com/css?family=Roboto+Condensed' rel='stylesheet' type='text/css'>
-    <meta charset="utf-8">
+    <!--Import Google Icon Font-->
+     <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+     <!-- Import Roboto condensed font -->
+     <link href='https://fonts.googleapis.com/css?family=Roboto+Condensed' rel='stylesheet' type='text/css'>
+     <!--Import materialize.css-->
+     <link type="text/css" rel="stylesheet" href="public/css/materialize.css"  media="screen,projection"/>
+     <!-- Import custom stylesheet -->
+    <link rel="stylesheet" href="public/css/style.css" type="text/css">
+    <!--Let browser know website is optimized for mobile-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <title>Cam Iverson | Web Dev</title>
   </head>
-  <body>
+  <body id="top">
     <nav class="navbar">
       <div class="container">
-        <ul class="navbar-list">
-          <li class="navbar-item u-pull-left"><a class="navbar-link" href="#top">Cam Iverson</a></li>
-          <li class="navbar-item u-pull-right"><a class="navbar-link" href="#contact">Contact</a></li>
-          <li class="navbar-item u-pull-right"><a class="navbar-link" href="#projects">Projects</a></li>
-          <li class="navbar-item u-pull-right"><a class="navbar-link" href="#about">About</a></li>
-
-        </ul>
+        <div class="row">
+          <div class="col s6">
+            <ul class="navbar-list">
+              <li class="navbar-item"><a class="navbar-link" href="#top">Cam Iverson</a></li>
+            </ul>
+          </div>
+          <div class="col s6 right">
+            <ul class="navbar-list">
+              <li class="navbar-item"><a class="navbar-link" href="#about">About</a></li>
+              <li class="navbar-item"><a class="navbar-link" href="#projects">Projects</a></li>
+              <li class="navbar-item"><a class="navbar-link" href="#contact" style="margin-right: 0px;">Contact</a></li>
+            </ul>
+          </div>
+        </div>
       </div>
     </nav>
+    <div id="about">
+      <div class="container">
+        <h3>About</h3>
+        <div class="row">
+          <div class="col s12">
+            <img class="responsive-img circle" src="http://placehold.it/500x500" alt="" />
+            <h5>I'm a Full-Stack Developer, Life-long Gamer, and Builder of Awesome.<br><br>My passion for technology emerged at the young age of 5, when I found myself looking at the registry files for my family's computer. What I thought was going to speed up the computer for my gaming habits, instead ensured that no one would use that computer for a long time...</h5>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="projects">
+      <div class="container">
+        <h3>Projects</h3>
+        <div class="row">
+          <div class="col s3">
+            <h4>Project 1</h4>
+            <img class="responsive-img circle" src="http://placehold.it/500x500" alt="" />
+          </div>
+          <div class="col s3">
+            <h4>Project 2</h4>
+            <img class="responsive-img circle" src="http://placehold.it/500x500" alt="" />
+          </div>
+          <div class="col s3">
+            <h4>Project 3</h4>
+            <img class="responsive-img circle" src="http://placehold.it/500x500" alt="" />
+          </div>
+          <div class="col s3">
+            <h4>Project 4</h4>
+            <img class="responsive-img circle" src="http://placehold.it/500x500" alt="" />
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="contact">
+      <div class="container">
+        <h3>Contact</h3>
+        <div class="row">
+          <div class="col s12">
+            <img class="responsive-img circle" src="http://placehold.it/50x50" alt="" />
+            <img class="responsive-img circle" src="http://placehold.it/50x50" alt="" />
+            <img class="responsive-img circle" src="http://placehold.it/50x50" alt="" />
+          </div>
+        </div>
+      </div>
+    </div>
 
-    <img src="public/images/AsteroidPlayer.png" alt="Player" />
 
+    <!-- hiding image until I figure rotation out -->
+    <!-- <img src="public/images/AsteroidPlayerWhite.png" alt="Player" id="player" /> -->
+
+    <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+    <script type="text/javascript" src="public/js/bin/materialize.min.js"></script>
+    <!-- hiding script until I figure rotation out -->
+    <!-- <script type="text/javascript" src="public/scripts/playerController.js"></script> -->
   </body>
 </html>

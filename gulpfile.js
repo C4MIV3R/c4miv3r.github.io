@@ -1,17 +1,23 @@
 var gulp    = require('gulp'),
-    less    = require('gulp-less'),
+    sass    = require('gulp-sass'),
     watch   = require('gulp-watch');
 
 // gulp task for less
-gulp.task('less', function() {
-  gulp.src('./public/less/style.less')
-  .pipe(less())
-  .pipe(gulp.dest('./public/styles/'));
+gulp.task('sass', function() {
+  gulp.src('public/sass/style.scss')
+  .pipe(sass().on('error', sass.logError))
+  .pipe(gulp.dest('public/css/'));
+});
+// compile materialize css
+gulp.task('materialize-sass', function() {
+  gulp.src('public/sass/materialize.scss')
+  .pipe(sass().on('error', sass.logError))
+  .pipe(gulp.dest('public/css/'));
 });
 
 // gulp watch
 gulp.task('watch', function(){
-  gulp.watch('public/less/**/*.less', ['less']);
+  gulp.watch('public/sass/**/*.scss', ['sass']);
 });
 
-gulp.task('default', ['watch']);
+gulp.task('default', ['watch','materialize-sass']);
