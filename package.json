@@ -1,0 +1,22 @@
+{
+  "name": "psicoh.github.io",
+  "version": "1.0.0",
+  "description": "Cam Iverson's personal site/portfolio",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/PSIcoh/psicoh.github.io.git"
+  },
+  "keywords": [
+    "portfolio"
+  ],
+  "author": "Cam Iverson",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/PSIcoh/psicoh.github.io/issues"
+  },
+  "homepage": "https://github.com/PSIcoh/psicoh.github.io#readme"
+}
