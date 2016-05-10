@@ -1,13 +1,13 @@
- s// begin window.onload funtion
-window.onload = function() {
-
-}
+// begin window.onload funtion
+// window.onload = function() {
+//
+// }
 // global variables
 var placementTurn=0;
 var placementTurnTotal=16;
 var dragged;
 var playerOneScore=0, playerTwoScore=0, playerThreeScore=0, playerFourScore=0;
-var tokenArray = [ ];
+var tokenArray = [];
 
 // push stack of images into array, print array of images once
 // edit createTokens to push images into array, then print array once??
@@ -170,7 +170,6 @@ $('#scoreButton').click(function() {
   $('.pThreeScore').text('Player Three: '+playerThreeScore);
   $('.pFourScore').text('Player Four: '+playerFourScore);
 });
-// end window.onLoad function
 
 // on ~ press - display Rules
 // document.addEventListener('keydown', function(e) {
