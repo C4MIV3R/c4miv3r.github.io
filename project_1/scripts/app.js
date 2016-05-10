@@ -40,7 +40,7 @@ function monitorAPlayer(playerClass, color, fireCount) {
   $(playerClass).bind('DOMSubtreeModified', function(e) {
     if(e.target.innerHTML <= 0) {
       if(fireCount < 1) {
-        createTokens(playerClass, color)
+        createTokens(playerClass, color);
         fireCount++;
       } else if (fireCount >= 1) {
         // console.log('These aren\'t the droids you\'re looking for.');
