@@ -1,23 +1,19 @@
 <!DOCTYPE html>
-<html ng-app="portfolio">
+<html>
   <head>
-    <!-- Load angular scripts -->
-    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular.min.js"></script>
-    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.25/angular-route.js"></script>
-    <script src="public/scripts/portfolio.js"></script>
     <!--Import Google Icon Font-->
-    <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <!-- Import Roboto condensed font -->
-    <link href='https://fonts.googleapis.com/css?family=Roboto+Condensed' rel='stylesheet' type='text/css'>
-    <!--Import materialize.css-->
-    <link type="text/css" rel="stylesheet" href="public/css/materialize.css"  media="screen,projection"/>
-    <!-- Import custom stylesheet -->
+     <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+     <!-- Import Roboto condensed font -->
+     <link href='https://fonts.googleapis.com/css?family=Roboto+Condensed' rel='stylesheet' type='text/css'>
+     <!--Import materialize.css-->
+     <link type="text/css" rel="stylesheet" href="public/css/materialize.css"  media="screen,projection"/>
+     <!-- Import custom stylesheet -->
     <link rel="stylesheet" href="public/css/style.css" type="text/css">
     <!--Let browser know website is optimized for mobile-->
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <title>Cam Iverson | Web Dev</title>
+    <title>Cam Iverson</title>
   </head>
-  <body ng-controller="mainController">
+  <body id="top">
     <!-- Navbar -->
     <div class="navbar-fixed">
       <nav>
@@ -26,31 +22,38 @@
             <li><a href="#">Cam Iverson</a></li>
           </ul>
           <ul class="right">
-            <li><a href="#home">About</a></li>
-            <li><a href="#projects">Projects</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Projects</a></li>
           </ul>
         </div>
       </nav>
     </div>
     <!-- /Navbar -->
-    <div id="main">
-      <!-- Angular Templating -->
-      {{ message }}
-
-    </div>
-    <!-- Fixed Action Button for Contact -->
-      <div class="contact">
-        <div class="fixed-action-btn click-to-toggle">
-          <a class="btn-floating btn-large blue"><i class="material-icons">menu</i></a>
-          <ul>
-            <li><a class="btn-floating red"></a></li>
-            <li><a class="btn-floating yellow"></a></li>
-            <li><a class="btn-floating green"></a></li>
-            <li><a class="btn-floating blue"></a></li>
-          </ul>
+    <!-- Page content -->
+    <div id="about">
+      <div class="container">
+        <div class="row">
+          <div class="col s12">
+            <img class="responsive-img circle" src="http://placehold.it/300x300" alt="" />
+            <p>I'm a Full-Stack Developer, Life-long Gamer, and Builder of Awesome.<br><br>My passion for technology emerged at the young age of 5, when I found myself looking at the registry files for my family's computer. What I thought was going to speed up the computer for my gaming habits, instead ensured that no one would use that computer for a long time...</p>
+          </div>
+          <div class="col s12">
+            <div class="contact">
+              <div class="fixed-action-btn click-to-toggle">
+                <a class="btn-floating btn-large blue"><i class="material-icons">menu</i></a>
+                <ul>
+                  <li><a class="btn-floating red"><img src="https://opensource.org/files/linkedin.png" alt="" /></a></li>
+                  <li><a class="btn-floating yellow"></a></li>
+                  <li><a class="btn-floating green"></a></li>
+                  <li><a class="btn-floating blue"></a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
-    <!-- /Fixed Action Button for Contact -->
+    </div>
+    <!-- /Page content -->
     <!--  Begin Scripts -->
     <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
     <script type="text/javascript" src="public/js/bin/materialize.min.js"></script>
