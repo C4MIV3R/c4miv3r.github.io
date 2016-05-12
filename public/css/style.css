@@ -1,4 +1,4 @@
-body {
+@font-face {}body {
   font-family: 'Roboto Condensed', sans-serif;
   background-color: #1b1b1b; }
 
@@ -19,3 +19,23 @@ nav {
     transition: color 0.2s ease; }
   #about h4:hover {
     color: white; }
+
+.orangeArrow p {
+  position: fixed;
+  right: 10px;
+  bottom: 180px;
+  color: white;
+  font-size: 12px; }
+
+.orangeArrow img {
+  height: 100px;
+  width: 100px;
+  position: fixed;
+  right: -25px;
+  bottom: 90px; }
+
+.card .card-image .card-1-image {
+  height: 237px; }
+
+.card .card-image .card-2-image {
+  height: 237px; }

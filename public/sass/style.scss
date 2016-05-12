@@ -1,6 +1,10 @@
 $black-background: rgb(27, 27, 27);
 $primary: #2196F3;
 
+@font-face {
+  
+}
+
 body {
   font-family: 'Roboto Condensed', sans-serif;
   background-color: $black-background;
@@ -30,5 +34,34 @@ nav {
   }
   h4:hover {
     color: white;
+  }
+}
+// ------------- Contact ---------------
+.orangeArrow {
+  p {
+    position: fixed;
+    right: 10px;
+    bottom: 180px;
+    color: white;
+    font-size: 12px;
+  }
+  img {
+    height: 100px;
+    width: 100px;
+    position: fixed;
+    right: -25px;
+    bottom: 90px;
+  }
+}
+
+// -------------- Card Styles --------------
+.card {
+  .card-image {
+    .card-1-image {
+      height: 237px;
+    }
+    .card-2-image {
+      height: 237px;
+    }
   }
 }
