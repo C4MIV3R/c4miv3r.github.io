@@ -24,8 +24,8 @@
             <li><a href="#">Cam Iverson</a></li>
           </ul>
           <ul class="right">
-            <li><a href="#">About</a></li>
-            <li><a href="#">Projects</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#projects">Projects</a></li>
           </ul>
         </div>
       </nav>
@@ -58,7 +58,7 @@
       <div class="container">
         <div class="row">
           <div class="col s6">
-            <div class="card">
+            <div class="card medium">
               <div class="card-image">
                 <img class="card-1-image" src="public/images/battleSheep.png" alt="Battle Sheep" />
                 <span class="card-title">Battle Sheep</span>
@@ -68,47 +68,37 @@
               </div>
               <div class="card-action">
                 <a href="http://psicoh.github.io/project_1/">Current Version</a>
+                <a href="https://github.com/PSIcoh/psicoh.github.io/tree/master/project_1">Github</a>
+              </div>
+            </div>
+          </div>
+          <div class="col s6">
+            <div class="card medium">
+              <div class="card-image">
+                <img class="card-2-image" src="public/images/Unity2DShooter.png" alt="Contra Remake" />
+                <span class="card-title">Contra Remake</span>
+              </div>
+              <div class="card-content">
+                <p>When I was presented with the opportunity to build a game in Unity, I leapt at the chance to learn C# and build something that has been a large part of my life.  </p>
               </div>
               <div class="card-action">
-                <a href="https://github.com/PSIcoh/psicoh.github.io/tree/master/project_1">Github Repo</a>
+                <a href="http://psicoh.github.io/project_4/index.html">Current Version (Open in Safari or Firefox)</a>
+                <a href="https://github.com/PSIcoh/project_psicoh_game">Github</a>
               </div>
             </div>
           </div>
           <div class="col s6">
-            <div class="card">
+            <div class="card medium">
               <div class="card-image">
-                <div class="card-image">
-                  <img class="card-2-image" src="public/images/Unity2DShooter.png" alt="Contra Remake" />
-                  <span class="card-title">Contra Remake</span>
-                </div>
-                <div class="card-content">
-                  <p>When I was presented with the opportunity to build a game in Unity, I leapt at the chance to learn C# and build something that has been a large part of my life.  </p>
-                </div>
-                <div class="card-action">
-                  <a href="http://psicoh.github.io/project_4/index.html">Current Version (Open with Safari or Firefox)</a>
-                </div>
-                <div class="card-action">
-                  <a href="https://github.com/PSIcoh/project_psicoh_game">Github Repo</a>
-                </div>
+                <img class="card-2-image" src="public/images/MUchartGenerator.png" alt="Contra Remake" />
+                <span class="card-title">/MU/Chart Generator</span>
               </div>
-            </div>
-          </div>
-          <div class="col s6">
-            <div class="card">
-              <div class="card-image">
-                <div class="card-image">
-                  <img class="card-2-image" src="public/images/MUchartGenerator.png" alt="Contra Remake" />
-                  <span class="card-title">/MU/Chart Generator</span>
-                </div>
-                <div class="card-content">
-                  <p>The objective of this project was to create a drag and drop interface for users to create charts of album art that reflect the users favorite albums within a specific genre. </p>
-                </div>
-                <div class="card-action">
-                  <a href="#">Current Version</a>
-                </div>
-                <div class="card-action">
-                  <a href="#">Github Repo</a>
-                </div>
+              <div class="card-content">
+                <p>The objective of this group project was to create a drag and drop interface for users to create charts of album art that reflect the users favorite albums within a specific genre. During this project, I was responsible for building the back-end. </p>
+              </div>
+              <div class="card-action">
+                <a href="#">Current Version</a>
+                <a href="#">Github</a>
               </div>
             </div>
           </div>
@@ -124,10 +114,10 @@
       <div class="fixed-action-btn click-to-toggle">
         <a class="btn-floating btn-large blue"><i class="material-icons">menu</i></a>
         <ul>
-          <li><a class="btn-floating red" href="mailto:camiver@gmail.com"><i class="material-icons">email</i></a></li>
-          <li><a class="btn-floating yellow darken-1" href="tel:16302676258"><i class="material-icons">phone</i></a></li>
-          <li><a class="btn-floating green" href="https://github.com/PSIcoh"><i class="material-icons">code</i></a></li>
-          <li><a class="btn-floating blue" href="https://www.linkedin.com/in/camiver"><i class="material-icons">account_circle</i></a></li>
+          <li><div id="contactInfo" class="red"><span>Email</span></div><a class="btn-floating red contact-item" href="mailto:camiver@gmail.com"><i class="material-icons">email</i></a></li>
+          <li><div id="contactInfo" class="yellow darken-3"><span>Phone</span></div><a class="btn-floating yellow darken-3 contact-item" href="tel:16302676258"><i class="material-icons">phone</i></a></li>
+          <li><div id="contactInfo" class="green"><span>Github</span></div><a class="btn-floating green contact-item" href="https://github.com/PSIcoh"><i class="material-icons">code</i></a></li>
+          <li><div id="contactInfo" class="blue"><span>LinkedIn</span></div><a class="btn-floating blue contact-item" href="https://www.linkedin.com/in/camiver"><i class="material-icons">account_circle</i></a></li>
         </ul>
       </div>
     </div>
@@ -136,6 +126,7 @@
     <!-- Scripts -->
     <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
     <script type="text/javascript" src="public/js/bin/materialize.min.js"></script>
+    <script type="text/javascript" src="public/scripts/portfolio.js"></script>
     <!-- /Scripts -->
   </body>
 </html>

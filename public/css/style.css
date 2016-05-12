@@ -33,14 +33,23 @@ nav {
   width: 100px;
   position: fixed;
   right: -25px;
-  bottom: 90px; }
-
-.card .card-image .card-1-image {
-  height: 237px; }
-
-.card .card-image .card-2-image {
-  height: 237px; }
+  bottom: 90px;
+  -moz-user-select: none;
+  -webkit-user-drag: none;
+  -webkit-user-select: none;
+  -ms-user-select: none; }
 
 .card .card-title {
-  background-color: rgba(0, 0, 0, 0.75);
-  padding: 10px; }
+  background-color: rgba(0, 0, 0, 0.75); }
+
+.fixed-action-btn ul li #contactInfo {
+  right: 47px;
+  color: white;
+  position: fixed;
+  opacity: 0;
+  height: 35px;
+  width: 0px; }
+  .fixed-action-btn ul li #contactInfo span {
+    text-align: center;
+    position: relative;
+    top: 5px; }

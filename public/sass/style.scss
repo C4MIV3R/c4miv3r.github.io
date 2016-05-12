@@ -1,5 +1,7 @@
 $black-background: rgb(27, 27, 27);
 $primary: #2196F3;
+$card-action: rgb(250, 169, 61);
+$card-action-hover: rgb(255, 199, 125);
 
 body {
   font-family: 'Roboto Condensed', sans-serif;
@@ -48,21 +50,35 @@ nav {
     position: fixed;
     right: -25px;
     bottom: 90px;
+    -moz-user-select: none;
+    -webkit-user-drag: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
   }
 }
 
 // -------------- Card Styles --------------
 .card {
-  .card-image {
-    .card-1-image {
-      height: 237px;
-    }
-    .card-2-image {
-      height: 237px;
-    }
-  }
   .card-title {
     background-color: rgba(0, 0, 0, 0.75);
-    padding: 10px;
+  }
+}
+.fixed-action-btn {
+  ul {
+    li {
+      #contactInfo {
+        right: 47px;
+        color: white;
+        position: fixed;
+        opacity: 0;
+        height: 35px;
+        width: 0px;
+        span {
+          text-align: center;
+          position: relative;
+          top: 5px;
+        }
+      }
+    }
   }
 }
