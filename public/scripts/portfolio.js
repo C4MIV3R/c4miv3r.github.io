@@ -21,3 +21,32 @@ $('.contact-item').on('mouseout', function() {
 $('.btn-floating').on('click', function() {
   $('.orangeArrow').fadeToggle();
 });
+
+// --------------- Konami Code ----------------
+var konamiArray = [38,38,40,40,37,39,37,39,66,65,13];
+var playerEntry = [];
+
+function arrayCheck() {
+  var konamiString = konamiArray.toString();
+  var playerString = playerEntry.toString();
+  // Refactor this later - string comparison === weak
+  if (konamiString == playerString) {
+    
+    console.log("Konami Code!!!");
+  }
+}
+
+var body = document.querySelector('body');
+body.onkeydown = function(e) {
+  if ( !e.metaKey ) {
+    e.preventDefault();
+  }
+  playerEntry.push(e.keyCode);
+  if (playerEntry.length > 11) {
+    playerEntry.shift();
+  }
+  if (playerEntry.length === 11) {
+      arrayCheck();
+  }
+  console.log(playerEntry);
+}

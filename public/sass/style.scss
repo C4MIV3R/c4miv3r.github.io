@@ -1,18 +1,17 @@
-$black-background: rgb(27, 27, 27);
+$black-background: rgba(27, 27, 27, 0.9);
 $primary: #2196F3;
 $card-action: rgb(250, 169, 61);
 $card-action-hover: rgb(255, 199, 125);
 
 body {
   font-family: 'Roboto Condensed', sans-serif;
-  background-color: $black-background;
+  background: url('http://i.imgur.com/k7Owzhi.png') $black-background;
 }
 
 // -------------- Navbar Styles ----------------
 nav {
   background-color: $black-background;
   border-bottom: 1px solid black;
-  // box-shadow: none;
   ul {
     a:hover {
       color: $primary;
@@ -81,4 +80,24 @@ nav {
       }
     }
   }
+}
+// --------------- Konami Style ------------------
+// If you don't know the Konami Code:
+// press (in this order): up, up, down, down, left, right, left, right, b, a, enter
+#baconBit.makeitrain {
+  top: 100%;
+  left: 100%;
+  transform: rotate(2000deg);
+}
+
+#baconBit {
+  position: fixed;
+  width: 32px;
+  height: 32px;
+  background-image: url("https://s3.amazonaws.com/f.thumbs.redditmedia.com/OvX59a7-5YkWrwLw.png");
+  top: -5%;
+  left: -5%;
+  z-index: 999999;
+  transform: rotate(0deg);
+  transition: all 2s linear;
 }

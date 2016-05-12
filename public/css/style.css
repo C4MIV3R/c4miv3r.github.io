@@ -1,9 +1,9 @@
 body {
   font-family: 'Roboto Condensed', sans-serif;
-  background-color: #1b1b1b; }
+  background: url("http://i.imgur.com/k7Owzhi.png") rgba(27, 27, 27, 0.9); }
 
 nav {
-  background-color: #1b1b1b;
+  background-color: rgba(27, 27, 27, 0.9);
   border-bottom: 1px solid black; }
   nav ul a:hover {
     color: #2196F3;
@@ -53,3 +53,19 @@ nav {
     text-align: center;
     position: relative;
     top: 5px; }
+
+#baconBit.makeitrain {
+  top: 100%;
+  left: 100%;
+  transform: rotate(2000deg); }
+
+#baconBit {
+  position: fixed;
+  width: 32px;
+  height: 32px;
+  background-image: url("https://s3.amazonaws.com/f.thumbs.redditmedia.com/OvX59a7-5YkWrwLw.png");
+  top: -5%;
+  left: -5%;
+  z-index: 999999;
+  transform: rotate(0deg);
+  transition: all 2s linear; }
