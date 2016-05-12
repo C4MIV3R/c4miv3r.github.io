@@ -1,4 +1,4 @@
-@font-face {}body {
+body {
   font-family: 'Roboto Condensed', sans-serif;
   background-color: #1b1b1b; }
 
@@ -21,11 +21,12 @@ nav {
     color: white; }
 
 .orangeArrow p {
+  font-family: 'Indie Flower', sans-serif;
   position: fixed;
   right: 10px;
-  bottom: 180px;
+  bottom: 175px;
   color: white;
-  font-size: 12px; }
+  font-size: 14px; }
 
 .orangeArrow img {
   height: 100px;

@@ -1,10 +1,6 @@
 $black-background: rgb(27, 27, 27);
 $primary: #2196F3;
 
-@font-face {
-  
-}
-
 body {
   font-family: 'Roboto Condensed', sans-serif;
   background-color: $black-background;
@@ -39,11 +35,12 @@ nav {
 // ------------- Contact ---------------
 .orangeArrow {
   p {
+    font-family: 'Indie Flower', sans-serif;
     position: fixed;
     right: 10px;
-    bottom: 180px;
+    bottom: 175px;
     color: white;
-    font-size: 12px;
+    font-size: 14px;
   }
   img {
     height: 100px;
