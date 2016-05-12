@@ -40,3 +40,7 @@ nav {
 
 .card .card-image .card-2-image {
   height: 237px; }
+
+.card .card-title {
+  background-color: rgba(0, 0, 0, 0.75);
+  padding: 10px; }
