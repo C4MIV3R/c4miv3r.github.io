@@ -43,9 +43,6 @@ nav {
   -webkit-user-select: none;
   -ms-user-select: none; }
 
-.card .card-title {
-  background-color: rgba(0, 0, 0, 0.75); }
-
 .fixed-action-btn ul li #contactInfo {
   right: 47px;
   color: white;
