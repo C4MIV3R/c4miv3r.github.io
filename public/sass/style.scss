@@ -87,6 +87,23 @@ nav {
 // --------------- Konami Style ------------------
 // If you don't know the Konami Code:
 // press (in this order): up, up, down, down, left, right, left, right, b, a, enter
+.konami {
+  position: fixed;
+  display: hidden;
+  left: -150px;
+  bottom: 20px;
+  color: white;
+  font-family: 'Indie Flower', sans-serif;
+  font-size: 14px;
+  a {
+    display: hidden;
+  }
+  img {
+    margin-left: 10px;
+    height: 100px;
+    width: 100px;
+  }
+}
 
 // --------------- Media Queries -----------------
 @media only screen

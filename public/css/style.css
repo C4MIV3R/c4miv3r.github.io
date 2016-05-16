@@ -61,6 +61,21 @@ nav {
     position: relative;
     top: 5px; }
 
+.konami {
+  position: fixed;
+  display: hidden;
+  left: -150px;
+  bottom: 20px;
+  color: white;
+  font-family: 'Indie Flower', sans-serif;
+  font-size: 14px; }
+  .konami a {
+    display: hidden; }
+  .konami img {
+    margin-left: 10px;
+    height: 100px;
+    width: 100px; }
+
 @media only screen and (min-device-width: 414px) and (max-device-width: 736px) and (-webkit-min-device-pixel-ratio: 3) and (orientation: portrait) {
   .card-title {
     font-size: 14px; } }

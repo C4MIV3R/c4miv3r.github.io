@@ -31,7 +31,9 @@ function arrayCheck() {
   var playerString = playerEntry.toString();
   // Refactor this later - string comparison === weak
   if (konamiString == playerString) {
-
+    $('.konami').animate({
+      left: '10px'
+    }, 1000);
     console.log("Konami Code!!!");
   }
 }
