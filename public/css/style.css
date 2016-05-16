@@ -24,6 +24,12 @@ nav {
   #about h4:hover {
     color: white; }
 
+#more {
+  font-size: 20px; }
+
+#tagLine {
+  font-size: 20px; }
+
 .orangeArrow p {
   font-family: 'Indie Flower', sans-serif;
   position: fixed;
