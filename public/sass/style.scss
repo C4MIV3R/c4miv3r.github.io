@@ -89,29 +89,28 @@ nav {
 // press (in this order): up, up, down, down, left, right, left, right, b, a, enter
 .konami {
   position: fixed;
-  display: hidden;
   left: -150px;
   bottom: 20px;
   color: white;
   font-family: 'Indie Flower', sans-serif;
   font-size: 14px;
+  z-index: 9999;
   a {
     display: hidden;
   }
-  img {
+  .secret {
     margin-left: 10px;
     height: 100px;
     width: 100px;
   }
 }
-
-// --------------- Media Queries -----------------
-@media only screen
-  and (min-device-width: 414px)
-  and (max-device-width: 736px)
-  and (-webkit-min-device-pixel-ratio: 3)
-  and (orientation: portrait) {
-    .card-title {
-      font-size: 14px;
-    }
+.slider {
+  position: fixed;
+  left: -500px;
+  bottom: 10rem;
+  width: 500px;
+  z-index: 9999;
+  background-color: $black-background;
 }
+// --------------- Media Queries -----------------
+// TBD

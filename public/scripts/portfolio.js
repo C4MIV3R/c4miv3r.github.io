@@ -1,7 +1,16 @@
+$(document).ready(function(){
+  $('.modal-trigger').leanModal({
+    dismissable: false,
+     opacity: .9,
+     in_duration: 300,
+     out_duration: 300
+   });
+  $('.slider').slider();
+ });
+
 // on mouseover and mouseout - show or hide element
 $('.contact-item').on('mouseover', function() {
   // console.log('OW F!@#, STOP POKING ME!');
-  // how to select only the hovered element? this?
   var wantedDiv = $(this).siblings('#contactInfo');
   $(wantedDiv).animate({
     opacity: 1,
@@ -29,12 +38,11 @@ var playerEntry = [];
 function arrayCheck() {
   var konamiString = konamiArray.toString();
   var playerString = playerEntry.toString();
-  // Refactor this later - string comparison === weak
+  // Refactor this later - string comparison === weaksauce
   if (konamiString == playerString) {
     $('.konami').animate({
       left: '10px'
-    }, 1000);
-    console.log("Konami Code!!!");
+    }, 1500);
   }
 }
 
@@ -50,5 +58,21 @@ body.onkeydown = function(e) {
   if (playerEntry.length === 11) {
       arrayCheck();
   }
-  console.log(playerEntry);
 }
+
+// ----------- Top Secret Click Listener --------------
+var clicked = 0;
+$('.secret').on('click', function() {
+  if (clicked == 0) {
+    $('.slider').animate({
+      left: '375px',
+    }, 2000);
+    clicked++;
+  }
+  else {
+    $('.slider').animate({
+      left: '-500px'
+    }, 2000);
+    clicked--;
+  }
+});

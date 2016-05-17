@@ -63,19 +63,23 @@ nav {
 
 .konami {
   position: fixed;
-  display: hidden;
   left: -150px;
   bottom: 20px;
   color: white;
   font-family: 'Indie Flower', sans-serif;
-  font-size: 14px; }
+  font-size: 14px;
+  z-index: 9999; }
   .konami a {
     display: hidden; }
-  .konami img {
+  .konami .secret {
     margin-left: 10px;
     height: 100px;
     width: 100px; }
 
-@media only screen and (min-device-width: 414px) and (max-device-width: 736px) and (-webkit-min-device-pixel-ratio: 3) and (orientation: portrait) {
-  .card-title {
-    font-size: 14px; } }
+.slider {
+  position: fixed;
+  left: -500px;
+  bottom: 10rem;
+  width: 500px;
+  z-index: 9999;
+  background-color: rgba(27, 27, 27, 0.9); }
