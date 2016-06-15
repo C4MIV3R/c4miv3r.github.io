@@ -1,5 +1,6 @@
 html, body {
-  font-size: 16px;
+  line-height: 1em;
+  font-size: 1.2rem;
   margin: 0;
   padding: 0;
   width: 100%;
@@ -43,42 +44,42 @@ html, body {
   border-left: 2px solid black;
 }
 .playing-space-head {
-  margin-left: 275px;
-  font-size: 20px;
+  margin-left: 14rem;
+  font-size: 1.4rem;
   color: white;
   border: 2px solid black;
-  border-radius: 5px;
-  padding: 10px 10px 5px 10px;
+  border-radius: .2rem;
+  padding: 1rem 1rem 0.5rem 1rem;
 }
 span {
-  font-size: 20px;
+  font-size: 1.2rem;
   color: white;
   border: 2px solid black;
-  border-radius: 5px;
-  padding: 5px;
+  border-radius: .2rem;
+  padding:0.5rem;
   background-color: rgb(120, 120, 120);
-  box-shadow: 4px 4px rgba(43, 43, 43, 0.5);
+  box-shadow: 0.1rem 0.1rem rgba(43, 43, 43, 0.5);
 }
 button {
-  font-size: 20px;
+  font-size: 1.2rem;
   color: white;
   background: red;
-  margin-left: 25px;
+  margin-left: 1rem;
   font-family: 'Montserrat', sans-serif;
   outline: none;
   border-radius: 5px;
-  box-shadow: 4px 4px rgba(43,43,43,0.5);
+  box-shadow: 0.1rem 0.1rem rgba(43,43,43,0.5);
 }
 .land-piece {
   position: absolute;
   display: block;
-  height: 200px;
-  width: 140px;
+  height: 10rem;
+  width: 7rem;
   z-index:1;
 }
 .land-div {
-  margin-top: 10px;
-  margin-left: 20px;
+  margin-top: 1.2rem;
+  margin-left: 1.4rem;
 }
 #player-one-head {
   z-index: 10;
@@ -88,32 +89,32 @@ button {
 }
 .playerThree {
   position: absolute;
-  width: 150px;
-  top: 390px;
+  width: 1.2rem;
+  bottom: 13rem;
 }
 #player-three-head {
   position: absolute;
-  bottom: 310px;
-  left: 25px;
+  bottom: 14rem;
+  left: 0.6rem;
   z-index: 10;
 }
 .playerFour {
   position: absolute;
-  width: 150px;
-  top: 390px;
+  width: 1.2rem;
+  bottom: 13rem;
 }
 #player-four-head {
   position: absolute;
-  bottom: 310px;
-  right: 18px;
+  bottom: 14rem;
+  left: 0.6rem;
   z-index: 10;
 }
 #land-drop {
   display: inline-block;
   position: relative;
-  height: 200px;
+  height: 190px;
   width: 137px;
-  /* border: 2px solid gray; */
+  border: 2px solid gray;
 }
 .first-grid {
   margin-left: 25px;
@@ -271,13 +272,18 @@ z-index: 9001;
 }
 
 // all dimensions in  Width x Height
-@media (max-width: 1200px) {
-  html {
-    font-size: 14px;
+@media screen and (max-width: 1200px) {
+    h1 {
+      font-size: 14px;
+    }
+  }
+@media screen and (max-width: 900px) {
+  h1 {
+    font-size: 12px;
   }
 }
-@media (max-width: 800px) {
-  html {
-    font-size: 12px;
+@media screen and (max-width: 400px) {
+  h1 {
+    font-size: 10px;
   }
 }
