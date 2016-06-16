@@ -1,13 +1,12 @@
 html, body {
   line-height: 1em;
-  font-size: 1.2rem;
+  font-size: 1rem;
   margin: 0;
   padding: 0;
   width: 100%;
   height: 100%;
   position: relative;
-  font-family: 'Montserrat', sans-serif;
-  overflow: hidden; }
+  font-family: 'Montserrat', sans-serif; }
 
 *[draggable=true] {
   -moz-user-select: none;
@@ -110,38 +109,41 @@ button {
   z-index: 10; }
 
 #land-drop {
+  line-height: 1;
   display: inline-block;
   position: relative;
-  height: 190px;
-  width: 137px;
+  height: 9.5rem;
+  width: 6.5rem;
   border: 2px solid gray; }
 
 .first-grid {
-  margin-left: 25px; }
+  margin-left: 1.1rem; }
 
 .drop-first-row {
-  margin-top: 10px;
+  margin-top: 1rem;
   width: 100%; }
 
 .drop-second-row {
   width: 83.5%;
   margin: 0 auto;
-  margin-top: -88px; }
+  margin-left: 3.5rem;
+  margin-top: -3.9rem; }
 
 .drop-third-row {
   width: 100%;
   margin: 0 auto;
-  margin-top: -88px; }
+  margin-top: -3.9rem; }
 
 .drop-fourth-row {
   width: 83.5%;
   margin: 0 auto;
-  margin-top: -88px; }
+  margin-left: 3.5rem;
+  margin-top: -3.9rem; }
 
 .drop-fifth-row {
   width: 100%;
   margin: 0 auto;
-  margin-top: -88px; }
+  margin-top: -3.9rem; }
 
 .sheep-piece {
   display: inline-block;
@@ -263,12 +265,12 @@ z-index: 9001;
 
 @media screen and (max-width: 1200px) {
   h1 {
-    font-size: 14px; } }
+    font-size: 1rem; } }
 @media screen and (max-width: 900px) {
   h1 {
-    font-size: 12px; } }
+    font-size: 0.7; } }
 @media screen and (max-width: 400px) {
   h1 {
-    font-size: 10px; } }
+    font-size: 0.5; } }
 
 /*# sourceMappingURL=stylesheet.css.map */
