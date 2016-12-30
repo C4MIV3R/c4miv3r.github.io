@@ -28,104 +28,109 @@
         <h4 class="pFourScore">No scores</h4>
     </div>
     <!-- end of rules div -->
-    <!-- Player One's column -->
-    <div class="column-left">
-      <!-- Player One header -->
-      <span id="player-one-head">Player One</span>
-      <!-- Player One's playing pieces -->
-      <div class="land-div playerOne">
-        <img src="images/battlesheetp_board.png" draggable="true" class="land-piece" ondragstart="event.dataTransfer.setData('image/png', null)">
-        <img src="images/battlesheetp_board.png" draggable="true" class="land-piece" ondragstart="event.dataTransfer.setData('image/png', null)">
-        <img src="images/battlesheetp_board.png" draggable="true" class="land-piece" ondragstart="event.dataTransfer.setData('image/png', null)">
-        <img src="images/battlesheetp_board.png" draggable="true" class="land-piece" ondragstart="event.dataTransfer.setData('image/png', null)">
+    <div class="container">
+      <!-- Player One & Two column -->
+      <div class="column-left">
+        <!-- Player One header -->
+        <span id="player-one-head">Player One</span>
+        <!-- Player One's playing pieces -->
+        <div class="land-div playerOne">
+          <img src="images/battlesheetp_board.png" draggable="true" class="land-piece" ondragstart="event.dataTransfer.setData('image/png', null)">
+          <img src="images/battlesheetp_board.png" draggable="true" class="land-piece" ondragstart="event.dataTransfer.setData('image/png', null)">
+          <img src="images/battlesheetp_board.png" draggable="true" class="land-piece" ondragstart="event.dataTransfer.setData('image/png', null)">
+          <img src="images/battlesheetp_board.png" draggable="true" class="land-piece" ondragstart="event.dataTransfer.setData('image/png', null)">
+        </div>
+        <!-- end player one's playing pieces -->
+        <!-- Player Four heading -->
+        <span id="player-four-head">Player Four</span>
+        <!-- Player Four's playing pieces -->
+        <div class="land-div playerFour">
+          <img src="images/battlesheetp_board.png" draggable="true" class="land-piece" ondragstart="event.dataTransfer.setData('image/png', null)">
+          <img src="images/battlesheetp_board.png" draggable="true" class="land-piece" ondragstart="event.dataTransfer.setData('image/png', null)">
+          <img src="images/battlesheetp_board.png" draggable="true" class="land-piece" ondragstart="event.dataTransfer.setData('image/png', null)">
+          <img src="images/battlesheetp_board.png" draggable="true" class="land-piece" ondragstart="event.dataTransfer.setData('image/png', null)">
+        </div>
+        <!-- end player four's playing pieces -->
       </div>
-      <!-- Player Two heading -->
-      <span id="player-four-head">Player Four</span>
-      <div class="land-div playerFour">
-        <img src="images/battlesheetp_board.png" draggable="true" class="land-piece" ondragstart="event.dataTransfer.setData('image/png', null)">
-        <img src="images/battlesheetp_board.png" draggable="true" class="land-piece" ondragstart="event.dataTransfer.setData('image/png', null)">
-        <img src="images/battlesheetp_board.png" draggable="true" class="land-piece" ondragstart="event.dataTransfer.setData('image/png', null)">
-        <img src="images/battlesheetp_board.png" draggable="true" class="land-piece" ondragstart="event.dataTransfer.setData('image/png', null)">
-      </div>
-      <!-- end of Player One's playing pieces -->
-    </div>
-    <!-- end of Player One's column -->
-    <!-- begin Playing Field -->
-    <div class="column-center">
-        <button id="ruleButton">Rules</button>
-      <!-- Playing Field Header -->
-      <span class="playing-space-head">Playing Space</span>
-      <!-- Grid of divs for placement of tiles -->
-      <!-- div containing the entirity of the first grid -->
-      <button id="scoreButton">Score</button>
-      <div class="first-grid">
-        <!-- First Row -->
-        <div class="drop-first-row">
-          <div class="dropzone" id="land-drop" ondragover="event.preventDefault()"></div>
-          <div class="dropzone" id="land-drop" ondragover="event.preventDefault()"></div>
-          <div class="dropzone" id="land-drop" ondragover="event.preventDefault()"></div>
-          <div class="dropzone" id="land-drop" ondragover="event.preventDefault()"></div>
-          <div class="dropzone" id="land-drop" ondragover="event.preventDefault()"></div>
-          <div class="dropzone" id="land-drop" ondragover="event.preventDefault()"></div>
-        </div>
-        <!-- Second Row - staggered to allow hexagons to fit together -->
-        <div class="drop-second-row">
-          <div class="dropzone" id="land-drop" ondragover="event.preventDefault()"></div>
-          <div class="dropzone" id="land-drop" ondragover="event.preventDefault()"></div>
-          <div class="dropzone" id="land-drop" ondragover="event.preventDefault()"></div>
-          <div class="dropzone" id="land-drop" ondragover="event.preventDefault()"></div>
-          <div class="dropzone" id="land-drop" ondragover="event.preventDefault()"></div>
-        </div>
-        <!-- Third Row -->
-        <div class="drop-third-row">
-          <div class="dropzone" id="land-drop" ondragover="event.preventDefault()"></div>
-          <div class="dropzone" id="land-drop" ondragover="event.preventDefault()"></div>
-          <div class="dropzone" id="land-drop" ondragover="event.preventDefault()"></div>
-          <div class="dropzone" id="land-drop" ondragover="event.preventDefault()"></div>
-          <div class="dropzone" id="land-drop" ondragover="event.preventDefault()"></div>
-          <div class="dropzone" id="land-drop" ondragover="event.preventDefault()"></div>
-        </div>
-        <!-- Fourth row - staggared to allow hexagons to fit together -->
-        <div class="drop-fourth-row">
-          <div class="dropzone" id="land-drop" ondragover="event.preventDefault()"></div>
-          <div class="dropzone" id="land-drop" ondragover="event.preventDefault()"></div>
-          <div class="dropzone" id="land-drop" ondragover="event.preventDefault()"></div>
-          <div class="dropzone" id="land-drop" ondragover="event.preventDefault()"></div>
-          <div class="dropzone" id="land-drop" ondragover="event.preventDefault()"></div>
-        </div>
-        <!-- Fifth row -->
-        <div class="drop-fifth-row">
-          <div class="dropzone" id="land-drop" ondragover="event.preventDefault()"></div>
-          <div class="dropzone" id="land-drop" ondragover="event.preventDefault()"></div>
-          <div class="dropzone" id="land-drop" ondragover="event.preventDefault()"></div>
-          <div class="dropzone" id="land-drop" ondragover="event.preventDefault()"></div>
-          <div class="dropzone" id="land-drop" ondragover="event.preventDefault()"></div>
-          <div class="dropzone" id="land-drop" ondragover="event.preventDefault()"></div>
+      <!-- end of player one and four's column -->
+      <!-- begin Playing Field -->
+      <div class="column-center">
+          <button id="ruleButton">Rules</button>
+        <!-- Playing Field Header -->
+        <span class="playing-space-head">Playing Space</span>
+        <!-- Grid of divs for placement of tiles -->
+        <!-- div containing the entirity of the first grid -->
+        <button id="scoreButton">Score</button>
+        <div class="first-grid">
+          <!-- First Row -->
+          <div class="drop-first-row">
+            <div class="dropzone" id="land-drop" ondragover="event.preventDefault()"></div>
+            <div class="dropzone" id="land-drop" ondragover="event.preventDefault()"></div>
+            <div class="dropzone" id="land-drop" ondragover="event.preventDefault()"></div>
+            <div class="dropzone" id="land-drop" ondragover="event.preventDefault()"></div>
+            <div class="dropzone" id="land-drop" ondragover="event.preventDefault()"></div>
+            <div class="dropzone" id="land-drop" ondragover="event.preventDefault()"></div>
+          </div>
+          <!-- Second Row - staggered to allow hexagons to fit together -->
+          <div class="drop-second-row">
+            <div class="dropzone" id="land-drop" ondragover="event.preventDefault()"></div>
+            <div class="dropzone" id="land-drop" ondragover="event.preventDefault()"></div>
+            <div class="dropzone" id="land-drop" ondragover="event.preventDefault()"></div>
+            <div class="dropzone" id="land-drop" ondragover="event.preventDefault()"></div>
+            <div class="dropzone" id="land-drop" ondragover="event.preventDefault()"></div>
+          </div>
+          <!-- Third Row - aligned with row one -->
+          <div class="drop-third-row">
+            <div class="dropzone" id="land-drop" ondragover="event.preventDefault()"></div>
+            <div class="dropzone" id="land-drop" ondragover="event.preventDefault()"></div>
+            <div class="dropzone" id="land-drop" ondragover="event.preventDefault()"></div>
+            <div class="dropzone" id="land-drop" ondragover="event.preventDefault()"></div>
+            <div class="dropzone" id="land-drop" ondragover="event.preventDefault()"></div>
+            <div class="dropzone" id="land-drop" ondragover="event.preventDefault()"></div>
+          </div>
+          <!-- Fourth row - staggared to allow hexagons to fit together -->
+          <div class="drop-fourth-row">
+            <div class="dropzone" id="land-drop" ondragover="event.preventDefault()"></div>
+            <div class="dropzone" id="land-drop" ondragover="event.preventDefault()"></div>
+            <div class="dropzone" id="land-drop" ondragover="event.preventDefault()"></div>
+            <div class="dropzone" id="land-drop" ondragover="event.preventDefault()"></div>
+            <div class="dropzone" id="land-drop" ondragover="event.preventDefault()"></div>
+          </div>
+          <!-- Fifth row aligned with row one and three -->
+          <div class="drop-fifth-row">
+            <div class="dropzone" id="land-drop" ondragover="event.preventDefault()"></div>
+            <div class="dropzone" id="land-drop" ondragover="event.preventDefault()"></div>
+            <div class="dropzone" id="land-drop" ondragover="event.preventDefault()"></div>
+            <div class="dropzone" id="land-drop" ondragover="event.preventDefault()"></div>
+            <div class="dropzone" id="land-drop" ondragover="event.preventDefault()"></div>
+            <div class="dropzone" id="land-drop" ondragover="event.preventDefault()"></div>
+          </div>
         </div>
       </div>
-    </div>
-    <!-- Player Two's column -->
-    <div class="column-right">
-      <!-- Player Two heading -->
-      <span id="player-two-head">Player Two</span>
-      <!-- Player Two's playing pieces -->
-      <div class="land-div playerTwo">
-        <img src="images/battlesheetp_board.png" draggable="true" class="land-piece" ondragstart="event.dataTransfer.setData('image/png', null)">
-        <img src="images/battlesheetp_board.png" draggable="true" class="land-piece" ondragstart="event.dataTransfer.setData('image/png', null)">
-        <img src="images/battlesheetp_board.png" draggable="true" class="land-piece" ondragstart="event.dataTransfer.setData('image/png', null)">
-        <img src="images/battlesheetp_board.png" draggable="true" class="land-piece" ondragstart="event.dataTransfer.setData('image/png', null)">
-      </div>
+      <!-- Player Two and Three's column -->
+      <div class="column-right">
         <!-- Player Two heading -->
-        <span id="player-three-head">Player Three</span>
-      <div class="land-div playerThree">
-        <img src="images/battlesheetp_board.png" draggable="true" class="land-piece" ondragstart="event.dataTransfer.setData('image/png', null)">
-        <img src="images/battlesheetp_board.png" draggable="true" class="land-piece" ondragstart="event.dataTransfer.setData('image/png', null)">
-        <img src="images/battlesheetp_board.png" draggable="true" class="land-piece" ondragstart="event.dataTransfer.setData('image/png', null)">
-        <img src="images/battlesheetp_board.png" draggable="true" class="land-piece" ondragstart="event.dataTransfer.setData('image/png', null)">
+        <span id="player-two-head">Player Two</span>
+        <!-- Player Two's playing pieces -->
+        <div class="land-div playerTwo">
+          <img src="images/battlesheetp_board.png" draggable="true" class="land-piece" ondragstart="event.dataTransfer.setData('image/png', null)">
+          <img src="images/battlesheetp_board.png" draggable="true" class="land-piece" ondragstart="event.dataTransfer.setData('image/png', null)">
+          <img src="images/battlesheetp_board.png" draggable="true" class="land-piece" ondragstart="event.dataTransfer.setData('image/png', null)">
+          <img src="images/battlesheetp_board.png" draggable="true" class="land-piece" ondragstart="event.dataTransfer.setData('image/png', null)">
+        </div>
+        <!-- end player Two's playing pieces -->
+          <!-- Player Three heading -->
+          <span id="player-three-head">Player Three</span>
+        <div class="land-div playerThree">
+          <img src="images/battlesheetp_board.png" draggable="true" class="land-piece" ondragstart="event.dataTransfer.setData('image/png', null)">
+          <img src="images/battlesheetp_board.png" draggable="true" class="land-piece" ondragstart="event.dataTransfer.setData('image/png', null)">
+          <img src="images/battlesheetp_board.png" draggable="true" class="land-piece" ondragstart="event.dataTransfer.setData('image/png', null)">
+          <img src="images/battlesheetp_board.png" draggable="true" class="land-piece" ondragstart="event.dataTransfer.setData('image/png', null)">
+        </div>
+        <!-- end of player Three's playing pieces -->
       </div>
-      <!-- end of player Two playing pieces -->
-    </div>
-  <!-- end of rules div -->
+    <!-- end of player Two and Three's column -->
+  </div>
     <!-- begin scripts -->
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.js"></script>
     <script type="text/javascript" src="scripts/app.js"></script>
