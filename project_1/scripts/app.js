@@ -1,7 +1,3 @@
-// begin window.onload funtion
-// window.onload = function() {
-//
-// }
 // global variables
 var placementTurn=0;
 var placementTurnTotal=16;
