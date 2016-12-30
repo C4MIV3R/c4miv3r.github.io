@@ -53,18 +53,22 @@ function scoreboardTracking() {
     if(playerParentNode.className === 'land-div playerOne') {
       var playerTotalTokens = $('.playerOne').children().length;
       playerOneScore = 17 - playerTotalTokens;
+      $('.pOneScore').text('Player One: '+playerOneScore);
       // console.log(playerOneScore);
     } else if(playerParentNode.className === 'land-div playerTwo') {
       var playerTotalTokens = $('.playerTwo').children().length;
       playerTwoScore = 17 - playerTotalTokens;
+      $('.pTwoScore').text('Player Two: '+playerTwoScore);
       // console.log(playerTwoScore);
     } else if(playerParentNode.className === 'land-div playerThree') {
       var playerTotalTokens = $('.playerThree').children().length;
       playerThreeScore = 17 - playerTotalTokens;
+      $('.pThreeScore').text('Player Three: '+playerThreeScore);
       // console.log(playerThreeScore);
     } else if(playerParentNode.className === 'land-div playerFour') {
       var playerTotalTokens = $('.playerFour').children().length;
       playerFourScore = 17 - playerTotalTokens;
+      $('.pFourScore').text('Player Four: '+playerFourScore);
       // console.log(playerFourScore);
     } else {
       // console.log('wat');
@@ -161,10 +165,6 @@ $('#ruleButton').click(function() {
 });
 $('#scoreButton').click(function() {
   $('.almighty-scores').fadeToggle(600,'swing');
-  $('.pOneScore').text('Player One: '+playerOneScore);
-  $('.pTwoScore').text('Player Two: '+playerTwoScore);
-  $('.pThreeScore').text('Player Three: '+playerThreeScore);
-  $('.pFourScore').text('Player Four: '+playerFourScore);
 });
 
 // on ~ press - display Rules
