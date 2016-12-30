@@ -9,36 +9,35 @@ html, body {
   font-family: 'Montserrat', sans-serif;
   // overflow: hidden;
 }
+.container {
+  display: flex;
+  flex-direction: row;
+}
 *[draggable=true] {
   -moz-user-select:none;
   -khtml-user-drag: element;
   cursor: grab;
 }
 .column-left {
-  display: inline-block;
+  order: 1;
   position: relative;
-  width: 14.06%;
   height: 100%;
   background-color: rgba(180,20,20,1);
   text-align: center;
-  float: left;
   overflow: hidden;
   border-right: 2px solid black;
 }
 .column-center {
-  display: inline-block;
+  order: 2;
   position: relative;
-  width: 71.55%;
   height: 100%;
   background-color: rgb(55, 55, 55);
 }
 .column-right {
-  display: inline-block;
+  order: 3;
   position: relative;
-  width: 14.06%;
   height: 100%;
   background-color: rgb(88, 180, 200);
-  float: right;
   text-align: center;
   overflow: hidden;
   border-left: 2px solid black;
