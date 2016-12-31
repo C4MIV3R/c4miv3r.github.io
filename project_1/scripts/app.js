@@ -146,37 +146,6 @@ function drop(e) {
     dragged.setAttribute('draggable', false);
   }
 }
-function touchStart(e) {
- dragged = e.target;
- e.target.style.opacity = 0.5;
-}
-function touchMove(e) {
-  e.target.style.opacity = 0.5;
-}
-function touchEnd(e) {
-  e.preventDefault();
-  if(e.target.className === "dropzone") {
-    e.target.style.background = "";
-    dragged.parentNode.removeChild(dragged);
-    e.target.appendChild(dragged);
-    var divTarget = e.target;
-    secondaryGrid(e);
-    dragged.setAttribute('draggable', false);     // remove draggable ability from board pieces once they are placed
-    placementTurn++;                              // add one to placementTurn
-    if(placementTurn >= placementTurnTotal) {     // used as a check to see if the max number of board tiles have been played
-      $('.dropzone').removeClass('dropzone');     // remove dropzone classes from all divs to prevent movement of board
-      // console.log("We go in! We kill!");          // We go iiinnnnn. We kiiilllll.
-    } else {
-      // console.log("Soon my dog of war...");       // You just... you just wait!
-    }
-  } else if(e.target.className === "dropzoneOne") {
-    e.target.style.background = "";
-    scoreboardTracking();
-    dragged.parentNode.removeChild(dragged);
-    e.target.appendChild(dragged);
-    dragged.setAttribute('draggable', false);
-  }
-}
 
 // mouse click events fired on draggable target
 document.addEventListener('drag', drag, false);
@@ -187,10 +156,11 @@ document.addEventListener('dragenter', dragEnter, false);
 document.addEventListener('dragleave', dragLeave, false);
 document.addEventListener('drop', drop, false);
 // mobile touch events fired on draggable target
-document.addEventListener('touchstart', touchStart, false);
-document.addEventListener('touchend', touchEnd, false);
-document.addEventListener('touchmove', touchMove, false);
-document.addEventListener('touchcancel', touchCancel, false);
+// -------- ????? TOUCH EVENTS BREAK RULES AND SCOREBOARD BUTTON ????? -----------
+//document.addEventListener('touchstart', touchStart, false);
+//document.addEventListener('touchend', touchEnd, false);
+//document.addEventListener('touchmove', touchMove, false);
+//document.addEventListener('touchcancel', touchCancel, false);
 
 // clickable rules and score button
 $('#ruleButton').click(function() {
