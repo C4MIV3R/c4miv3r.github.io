@@ -31,6 +31,7 @@ html, body {
   text-align: center;
   overflow: hidden;
   border-right: 2px solid black;
+  position: relative;
 }
 .column-center {
   order: 2;
@@ -38,6 +39,7 @@ html, body {
   height: 100%;
   width: 70%;
   background-color: rgb(55, 55, 55);
+  position: relative;
 }
 .column-right {
   order: 3;
@@ -48,6 +50,7 @@ html, body {
   text-align: center;
   overflow: hidden;
   border-left: 2px solid black;
+  position: relative;
 }
 .playing-space-head {
   margin-left: 14rem;
