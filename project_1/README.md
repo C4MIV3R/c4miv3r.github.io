@@ -36,11 +36,12 @@
 * Once that was figured out, I moved on to writing more efficient code, score tracking, displaying rules and scores, and last - final styling to make sure everything looked good.
 
 ## Unsolved Issues
-* I would have liked to find a way to track the players' scores and then automatically declare a winner, however, without having to manually look at the scores to decide. This may still be possible since I am tracking points per player, but am unsure of how to proceed.
+* I would have liked to find a way to track the players' scores and then automatically declare a winner, however, without having to manually look at the scores to decide. This may still be possible since I am tracking points per player, need to write a function to declare winner after certain events occur.
 * Current version does not play like original due to inability to stack tokens and split the stacks. Will look into for later versions.
-* I also would like to make this game playable on mobile, but am at a complete loss as to how ensure interactivity on mobile
+* Mobile version/mobile interactivity UPDATE: transitioned to flexbox - game currently responds somewhat better to mobile devices, however still cannot react to touch events.
+* Touch events not working currently - rewrite touch event functions.
 * I'm sure there's a better way to listen for certain elements to change and react based on those changes, but am unsure of those methods.
-* The grid for placing the land pieces is also less detailed than I would have liked. I believe there is a better way to create the first grid that would allow for a more detailed positioning of pieces.
+* Grid for placing pieces is terrible. Need to find a way to allow first player to place a piece anywhere within playing area and build the grid around the played piece - allowing the board to grow organically instead of in such a monotonous way as I have currently laid it out.
 
 ## Resources
 
