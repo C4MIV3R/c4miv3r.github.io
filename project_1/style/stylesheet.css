@@ -9,8 +9,13 @@ html, body {
   font-family: 'Montserrat', sans-serif; }
 
 .container {
-  display: flex;
-  flex-direction: row; }
+  display: inline-flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 100%; }
 
 *[draggable=true] {
   -moz-user-select: none;
@@ -19,8 +24,9 @@ html, body {
 
 .column-left {
   order: 1;
-  position: relative;
+  flex-grow: 1;
   height: 100%;
+  width: 15%;
   background-color: #b41414;
   text-align: center;
   overflow: hidden;
@@ -28,14 +34,16 @@ html, body {
 
 .column-center {
   order: 2;
-  position: relative;
+  flex-grow: 1;
   height: 100%;
+  width: 70%;
   background-color: #373737; }
 
 .column-right {
   order: 3;
-  position: relative;
+  flex-grow: 1;
   height: 100%;
+  width: 15%;
   background-color: #58b4c8;
   text-align: center;
   overflow: hidden;
@@ -108,40 +116,51 @@ button {
   z-index: 10; }
 
 #land-drop {
+  order: 1;
+  flex-grow: 1;
   line-height: 1;
-  display: inline-block;
-  position: relative;
   height: 9.5rem;
   width: 6.5rem;
   border: 2px solid gray; }
 
 .first-grid {
-  margin-left: 1.1rem; }
+  width: 100%; }
 
 .drop-first-row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   margin-top: 1rem;
   width: 100%; }
 
 .drop-second-row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 83.5%;
-  margin: 0 auto;
   margin-left: 3.5rem;
   margin-top: -3.9rem; }
 
 .drop-third-row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 100%;
-  margin: 0 auto;
   margin-top: -3.9rem; }
 
 .drop-fourth-row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 83.5%;
-  margin: 0 auto;
   margin-left: 3.5rem;
   margin-top: -3.9rem; }
 
 .drop-fifth-row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 100%;
-  margin: 0 auto;
   margin-top: -3.9rem; }
 
 .sheep-piece {
