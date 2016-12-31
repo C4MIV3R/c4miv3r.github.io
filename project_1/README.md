@@ -2,8 +2,7 @@
 ![Battle Sheep](http://geekdad.com/wp-content/uploads/2015/06/BattleSheep-featured.jpg)
 
 # Copyright:
-* I do not own this game. Nor do I intend to advertise as such. This game was created by Blue Orange Games. Link to their store below:
-* [Battle Sheep](http://www.blueorangegames.com/index.php/games/battle-sheep)
+* I do not own this game. Nor do I intend to advertise as such. This game was created by Blue Orange Games. Link to store: [Battle Sheep](http://www.blueorangegames.com/index.php/games/battle-sheep)
 
 ## Rules
 * Player 1 places their first land piece anywhere onto the grid.
@@ -16,7 +15,7 @@
 * Players then count the number of hexagons their sheep are covering and that is their total score.
 * The player with the highest score wins!
 
-## Technology used:
+## Tech used:
 * HTML5
   - Used for the basic structure of the page
 * HTML5 Drag and Drop
@@ -35,7 +34,7 @@
 * Having figured out drag and drop at a basic level (to allow the board pieces to be placed), I looked at it in more detail and how to layer another grid on top of the existing one that would accept elements to be dropped into it.
 * Once that was figured out, I moved on to writing more efficient code, score tracking, displaying rules and scores, and last - final styling to make sure everything looked good.
 
-## Unsolved Issues
+## Future features/issue tracker
 * I would have liked to find a way to track the players' scores and then automatically declare a winner, however, without having to manually look at the scores to decide. This may still be possible since I am tracking points per player, need to write a function to declare winner after certain events occur.
 * Current version does not play like original due to inability to stack tokens and split the stacks. Will look into for later versions.
 * Mobile version/mobile interactivity UPDATE: transitioned to flexbox - game currently responds somewhat better to mobile devices, however still cannot react to touch events.
@@ -47,3 +46,4 @@
 
 *  [Game Idea and Assets](http://www.blueorangegames.com/index.php/games/battle-sheep)
 * [MDN - Drap and Drop](https://developer.mozilla.org/en-US/docs/Web/API/HTML_Drag_and_Drop_API)
+* So many developers who came before me to figure out drag and drop :) Thanks guys!!!
