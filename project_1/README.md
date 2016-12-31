@@ -43,7 +43,14 @@
 * Grid for placing pieces is terrible. Need to find a way to allow first player to place a piece anywhere within playing area and build the grid around the played piece - allowing the board to grow organically instead of in such a monotonous way as I have currently laid it out.
 
 ## Resources
-
-*  [Game Idea and Assets](http://www.blueorangegames.com/index.php/games/battle-sheep)
+* [Game Idea and Assets](http://www.blueorangegames.com/index.php/games/battle-sheep)
 * [MDN - Drap and Drop](https://developer.mozilla.org/en-US/docs/Web/API/HTML_Drag_and_Drop_API)
 * So many developers who came before me to figure out drag and drop :) Thanks guys!!!
+
+## Bugs
+* So many bugs...
+* Third Player's header currently displaying in wrong place.
+* Playing Space header displays off center in mobile view
+* Mobile touch events not working
+* Player Three and Four's sheep tokens are positioning strangely since transitioning to flexbox
+* Wat... Rules and Scoreboard not working?
