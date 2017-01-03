@@ -75,6 +75,12 @@ function scoreboardTracking() {
     }
 }
 // create secondary grid once a land piece is dropped
+// ----- possible idea to change this ------
+// use an existing secondary grid that is placed behind the first grid and when
+// the land piece is dropped on the first grid, change the z-index of secondary grid
+// ------- OR OR OR OR -------
+// use an existing secondary grid that is placed behind the first grid and hidden
+// so when land piece is dropped, it is changed to displayed
 function secondaryGrid(e) {
   var secondGridDivTop = $('<div class="dropzoneOne" id="second-grid-top" ondragover="event.preventDefault()"></div>');
   var secondGridDivLeft = $('<div class="dropzoneOne" id="second-grid-left" ondragover="event.preventDefault()"></div>');
