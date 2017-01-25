@@ -1,0 +1,86 @@
+body {
+  font-family: 'Raleway', sans-serif;
+  background: url("http://i.imgur.com/k7Owzhi.png") rgba(27, 27, 27, 0.9); }
+
+nav {
+  background-color: rgba(27, 27, 27, 0.9);
+  border-bottom: 1px solid black; }
+  nav ul a:hover {
+    color: #2196F3;
+    transition: color 0.2s ease;
+    background-color: transparent; }
+
+.brand-logo {
+  font-family: 'Raleway', sans-serif;
+  font-weight: 500; }
+
+#about {
+  font-size: 1rem;
+  text-align: center;
+  margin-top: 3rem; }
+  #about h3 {
+    color: #2196F3;
+    transition: color 0.2s ease; }
+  #about h4:hover {
+    color: white; }
+
+#more {
+  font-size: 20px; }
+
+#tagLine {
+  font-size: 20px; }
+
+.orangeArrow p {
+  font-family: 'Indie Flower', sans-serif;
+  position: fixed;
+  right: 10px;
+  bottom: 175px;
+  color: white;
+  font-size: 14px; }
+.orangeArrow img {
+  height: 100px;
+  width: 100px;
+  position: fixed;
+  right: -25px;
+  bottom: 90px;
+  -moz-user-select: none;
+  -webkit-user-drag: none;
+  -webkit-user-select: none;
+  -ms-user-select: none; }
+
+.fixed-action-btn ul li #contactInfo {
+  right: 47px;
+  color: white;
+  position: fixed;
+  opacity: 0;
+  height: 35px;
+  width: 0px; }
+  .fixed-action-btn ul li #contactInfo span {
+    text-align: center;
+    position: relative;
+    top: 5px; }
+
+.konami {
+  position: fixed;
+  left: -150px;
+  bottom: 20px;
+  color: white;
+  font-family: 'Indie Flower', sans-serif;
+  font-size: 14px;
+  z-index: 9999; }
+  .konami a {
+    display: hidden; }
+  .konami .secret {
+    margin-left: 10px;
+    height: 100px;
+    width: 100px; }
+
+.slider {
+  position: fixed;
+  left: -500px;
+  bottom: 10rem;
+  width: 500px;
+  z-index: 9999;
+  background-color: rgba(27, 27, 27, 0.9); }
+
+/*# sourceMappingURL=style.css.map */
