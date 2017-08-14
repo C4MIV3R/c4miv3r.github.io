@@ -2,6 +2,7 @@
 
 // TO DO:
 // Number of lives working - DONE
+// More efficient numberOfLives update. Do I really need to update numberOfLives every frame? Just update on player death?
 
 using UnityEngine;
 using UnityEngine.UI;

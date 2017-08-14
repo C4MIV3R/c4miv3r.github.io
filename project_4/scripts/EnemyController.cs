@@ -1,9 +1,9 @@
 // Copyright 2016 Cameron Iverson
 
 // TO DO:
-// Enemy AI - on player entering trigger area - begin tracking and firing at player - MVP done
-// Patrol routes
-// On being killed - Destroy enemy gameObject
+// Enemy AI - on player entering trigger area - begin tracking and firing at player - MVP done - need to track player in vertical space instead of just horizontal
+// Patrol routes - should this go in EnemyAI.cs (?)
+// On being killed - wait a little bit then destroy the game object
 
 using UnityEngine;
 using System.Collections;

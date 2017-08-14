@@ -4,11 +4,14 @@
 
 // TO DO:
 // Respawn player after death - DONE
-// animations for:
+// collision with enemies doesn't push enemies around (Necessary now that player dies on contact?) - DONE?
+// shooting in directions other than left and right (diagonal, straight up, straight down)
+// Game Over script/function - does this belong here or in a different script entirely?
+
+// ANIMATIONS FOR:
 // runningFront - DONE
-// running and shooting up and down
-// collision with enemies doesn't push enemies around (Necessary now that player dies on contact?)
-// Game Over script/function
+// running and shooting - DONE
+// looking up and down - DONE
 
 using UnityEngine;
 using System.Collections;

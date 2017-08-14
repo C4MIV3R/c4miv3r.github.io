@@ -4,6 +4,7 @@
 // Shooting bullets left - DONE
 // On bullet collision wth enemy - destroy bullet - DONE
 // On bullet collision with enemy - kill enemy - DONE
+// Allow shots to move diagonally and straight up and down
 
 using UnityEngine;
 using System.Collections;

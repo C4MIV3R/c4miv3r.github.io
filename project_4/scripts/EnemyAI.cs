@@ -1,5 +1,8 @@
 // Copyright 2016 Cameron Iverson
 
+// TO DO:
+// Implement a patrol action for enemies - (?)
+
 ﻿using UnityEngine;
 using System.Collections;
 

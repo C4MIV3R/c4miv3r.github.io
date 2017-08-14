@@ -1,5 +1,8 @@
 // Copyright 2016 Cameron Iverson
 
+// TO DO:
+// On player numberOfLives being depleted - game over screen with button to start over and restart scene
+
 ﻿using UnityEngine;
 using System.Collections;
 

@@ -9,6 +9,8 @@ While at a programming bootcamp, I found myself building games as my projects th
 - Ferr2D Terrain Builder (Unity extension/tool)
 
 ### Currently Unfinished Work:
+See issues for a more complete list
+
 Player:
 - Animations still need lots of love. Currently, animations are still a little wonky.
 - Player ability to shoot in different directions (diagonal up, diagonal down, straight down, straight up).
@@ -18,7 +20,6 @@ Enemy:
 - When player is not within trigger area, enemy should patrol back and forth within an area.
 - Aim and fire bullets at player while player is within trigger area.
 - On being killed: wait a few seconds, fade sprite out, and then destroy gameObject.
-- Enemy currently stops firing when player stops moving despite being within trigger area.
 
 General:
 - Title Screen with difficulty selector

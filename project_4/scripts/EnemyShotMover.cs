@@ -1,5 +1,8 @@
 // Copyright 2016 Cameron Iverson
 
+// TO DO:
+// Allow shots to move diagonally and straight up and down as enemy tracks players
+
 using UnityEngine;
 using System.Collections;
 
