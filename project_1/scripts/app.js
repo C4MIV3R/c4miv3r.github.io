@@ -25,9 +25,8 @@ var tokenArray = [];
 // Creates tokens when the player's land pieces run out
 function createTokens(playerClass, color) {
   for(i=0;i <=15; i++) {
-    var imgTag = '<img src="images/'+color+'_battlesheep.png" draggable="true" class="sheep-piece" ondragover="event.preventDefault()" />';
-    var tokenColor = imgTag;
-    $(playerClass).append(tokenColor);
+    var playerTokens = '<img src="images/'+color+'_battlesheep.png" draggable="true" class="sheep-piece" ondragover="e.preventDefault()" />';
+    $(playerClass).append(playerTokens);
   }
 }
 // DOM observer that fires once player column is empty
@@ -71,21 +70,21 @@ function scoreboardTracking() {
       $('.pFourScore').text('Player Four: '+playerFourScore);
       // console.log(playerFourScore);
     } else {
-      // console.log('wat');
+        // console.log('wat');
     }
 }
 // create secondary grid once a land piece is dropped
 // ----- possible idea to change this ------
 // use an existing secondary grid that is placed behind the first grid and when
 // the land piece is dropped on the first grid, change the z-index of secondary grid
-// ------- OR OR OR OR -------
+// ------- OR -------
 // use an existing secondary grid that is placed behind the first grid and hidden
 // so when land piece is dropped, it is changed to displayed
 function secondaryGrid(e) {
-  var secondGridDivTop = $('<div class="dropzoneOne" id="second-grid-top" ondragover="event.preventDefault()"></div>');
-  var secondGridDivLeft = $('<div class="dropzoneOne" id="second-grid-left" ondragover="event.preventDefault()"></div>');
-  var secondGridDivRight = $('<div class="dropzoneOne" id="second-grid-right" ondragover="event.preventDefault()"></div>');
-  var secondGridDivBottom = $('<div class="dropzoneOne" id="second-grid-bottom" ondragover="event.preventDefault()"></div>');
+  var secondGridDivTop = $('<div class="dropzoneOne" id="second-grid-top" ondragover="e.preventDefault()"></div>');
+  var secondGridDivLeft = $('<div class="dropzoneOne" id="second-grid-left" ondragover="e.preventDefault()"></div>');
+  var secondGridDivRight = $('<div class="dropzoneOne" id="second-grid-right" ondragover="e.preventDefault()"></div>');
+  var secondGridDivBottom = $('<div class="dropzoneOne" id="second-grid-bottom" ondragover="e.preventDefault()"></div>');
   var divTarget = e.target;
   $(divTarget).append(secondGridDivTop, secondGridDivLeft, secondGridDivRight, secondGridDivBottom); // add second grid over the first to lock pieces into position
   $(divTarget).css("border","none");
@@ -163,10 +162,10 @@ document.addEventListener('dragleave', dragLeave, false);
 document.addEventListener('drop', drop, false);
 // mobile touch events fired on draggable target
 // -------- ????? TOUCH EVENTS BREAK RULES AND SCOREBOARD BUTTON ????? -----------
-//document.addEventListener('touchstart', touchStart, false);
-//document.addEventListener('touchend', touchEnd, false);
-//document.addEventListener('touchmove', touchMove, false);
-//document.addEventListener('touchcancel', touchCancel, false);
+document.addEventListener('touchstart', touchStart, false);
+document.addEventListener('touchend', touchEnd, false);
+document.addEventListener('touchmove', touchMove, false);
+document.addEventListener('touchcancel', touchCancel, false);
 
 // clickable rules and score button
 $('#ruleButton').click(function() {
