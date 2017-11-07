@@ -54,12 +54,14 @@ html, body {
   position: relative;
 }
 .playing-space-head {
-  margin-left: 14rem;
+  display: inline-block;
+  margin-left: 150px;
+  width: 25%;
   font-size: 1.4rem;
+  text-align: center;
   color: white;
   border: 2px solid black;
   border-radius: .2rem;
-  padding: 1rem 1rem 0.5rem 1rem;
 }
 span {
   font-size: 1.2rem;
@@ -88,35 +90,22 @@ button {
   z-index:1;
 }
 .land-div {
+  display: block;
+  height: 50%;
   margin-top: 1.2rem;
   margin-left: 1.4rem;
 }
-#player-one-head {
+#player-one-head, #player-two-head {
   z-index: 10;
+  margin-top: 30px;
 }
-#player-two-head {
-  z-index: 10;
-}
-.playerThree {
-  position: absolute;
+.playerThree, .playerFour {
+  display: block;
+  height: 50%;
   width: 1.2rem;
-  bottom: 13rem;
 }
-#player-three-head {
-  position: absolute;
-  bottom: 14rem;
-  left: 0.6rem;
-  z-index: 10;
-}
-.playerFour {
-  position: absolute;
-  width: 1.2rem;
-  bottom: 13rem;
-}
-#player-four-head {
-  position: absolute;
-  bottom: 14rem;
-  left: 0.6rem;
+#player-three-head, #player-four-head {
+  display: block;
   z-index: 10;
 }
 #land-drop {

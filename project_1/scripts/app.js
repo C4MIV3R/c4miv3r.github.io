@@ -29,8 +29,8 @@ function createTokens(playerClass, color) {
     $(playerClass).append(playerTokens);
   }
 }
-// DOM observer that fires once player column is empty
-// and only once
+// DOM observer that fires once player column is empty and fires only once
+// Better way to do this?
 function monitorAPlayer(playerClass, color, fireCount) {
   $(playerClass).bind('DOMSubtreeModified', function(e) {
     if(e.target.innerHTML <= 0) {
@@ -139,9 +139,8 @@ function drop(e) {
     placementTurn++;                              // add one to placementTurn
     if(placementTurn >= placementTurnTotal) {     // used as a check to see if the max number of board tiles have been played
       $('.dropzone').removeClass('dropzone');     // remove dropzone classes from all divs to prevent movement of board
-      // console.log("We go in! We kill!");          // We go iiinnnnn. We kiiilllll.
     } else {
-      // console.log("Soon my dog of war...");       // You just... you just wait!
+      // console.log("Come closer, I won't hurt you");
     }
   } else if(e.target.className === "dropzoneOne") {
     e.target.style.background = "";
@@ -162,10 +161,10 @@ document.addEventListener('dragleave', dragLeave, false);
 document.addEventListener('drop', drop, false);
 // mobile touch events fired on draggable target
 // -------- ????? TOUCH EVENTS BREAK RULES AND SCOREBOARD BUTTON ????? -----------
-document.addEventListener('touchstart', touchStart, false);
-document.addEventListener('touchend', touchEnd, false);
-document.addEventListener('touchmove', touchMove, false);
-document.addEventListener('touchcancel', touchCancel, false);
+// document.addEventListener('touchstart', touchStart, false);
+// document.addEventListener('touchend', touchEnd, false);
+// document.addEventListener('touchmove', touchMove, false);
+// document.addEventListener('touchcancel', touchCancel, false);
 
 // clickable rules and score button
 $('#ruleButton').click(function() {
